@@ -1,5 +1,7 @@
 function user_setup()
 	-- Options: Override default values
+	
+	--hi tim
     state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.HybridMode:options('Normal','DTLite','Subtle')
