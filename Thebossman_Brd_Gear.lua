@@ -114,7 +114,7 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs
 	
-	sets.precast.JA.Nightingale = {feet="Bihu Slippers +1"}
+	sets.precast.JA.Nightingale = {feet="Bihu Slippers +3"}
 	sets.precast.JA.Troubadour = {body="Bihu Jstcorps. +1"}
 	sets.precast.JA['Soul Voice'] = {legs="Bihu Cannions +3"}
 
