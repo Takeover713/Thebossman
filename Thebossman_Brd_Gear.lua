@@ -3,7 +3,7 @@ function user_setup()
     state.OffenseMode:options('Normal','Acc')
     state.CastingMode:options('Normal','Resistant','AoE')
     state.IdleMode:options('Normal','PDT')
-	state.Weapons:options('None','Savage','DualWeapons','Sword','Club')
+	state.Weapons:options('None','DualDaggers','SavageDW','CarnDW','Carn','Savage','Club')
 
 	-- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
@@ -42,11 +42,12 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Weapons sets
-	sets.weapons.Savage = {main="Naegling",sub="Centovente"}
-	sets.weapons.DualWeapons = {main="Aeneas",sub="Blurred Knife +1"}
+	sets.weapons.SavageDW = {main="Naegling",sub="Centovente"}
+	sets.weapons.DualDaggers = {main="Aeneas",sub="Tauret"}
+	sets.weapons.CarnDW = {main="Carnwenhan",sub="Tauret"}
 	--sets.weapons.DualSword = {main="Naegling",sub="Gleti's Knife"}
-	--sets.weapons.Carn = {main="Carnwenhan",sub="Genmei Shield"}
-	sets.weapons.Sword = {main="Naegling",sub="Genmei Shield"}
+	sets.weapons.Carn = {main="Carnwenhan",sub="Genmei Shield"}
+	sets.weapons.Savage = {main="Naegling",sub="Genmei Shield"}
 	sets.weapons.Club = {main="Daybreak",sub="Genmei Shield"}
 	
 	
@@ -78,14 +79,14 @@ function init_gear_sets()
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 	
 	sets.precast.FC.BardSong = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
 	range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head="Fili Calot +1",
     body="Inyanga Jubbah +2",
     hands="Leyline Gloves",
     legs="Kaykaus Tights +1",
-    feet="Telchine Pigaches",
+    feet="Fili Cothurnes +1",
     neck="Voltsurge Torque",
     waist="Witful Belt",
     left_ear="Loquac. Earring",
@@ -186,7 +187,7 @@ function init_gear_sets()
 
 	-- Gear to enhance certain classes of songs.  No instruments added here since Gjallarhorn is being used.
 	sets.midcast.Ballad = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -203,7 +204,7 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 	sets.midcast.Lullaby = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -220,7 +221,7 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 	sets.midcast['Horde Lullaby'] = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -238,7 +239,7 @@ function init_gear_sets()
 }
 	sets.midcast['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby'].AoE = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -255,7 +256,7 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 	sets.midcast['Horde Lullaby II'] = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -274,7 +275,7 @@ function init_gear_sets()
 	sets.midcast['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
 	
 	sets.midcast['Horde Lullaby II'].AoE = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -291,7 +292,7 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 	sets.midcast.Madrigal = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -310,7 +311,7 @@ function init_gear_sets()
 	sets.midcast.Paeon = {range="Daurdabla"}
 
 	sets.midcast.March = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -329,7 +330,7 @@ function init_gear_sets()
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 	
 	sets.midcast.Minuet = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -347,7 +348,7 @@ function init_gear_sets()
 }
 	
 	sets.midcast.Minne = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -365,7 +366,7 @@ function init_gear_sets()
 }
 
 	sets.midcast.Carol = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -383,7 +384,7 @@ function init_gear_sets()
 }
 	
 	sets.midcast["Sentinel's Scherzo"] = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -401,7 +402,7 @@ function init_gear_sets()
 } --feet="Fili Cothurnes +1" Brioso Slippers still provides more Duration
 
 	sets.midcast['Magic Finale'] = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
@@ -418,7 +419,7 @@ function init_gear_sets()
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 	sets.midcast.Mazurka = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -436,7 +437,7 @@ function init_gear_sets()
 }
 
 sets.midcast.Etude = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -454,7 +455,7 @@ sets.midcast.Etude = {
 }
 
 sets.midcast.Prelude = {
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -473,7 +474,7 @@ sets.midcast.Prelude = {
 	
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+	main="Carnwenhan",
     sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -492,38 +493,38 @@ sets.midcast.Prelude = {
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
-    sub="Genmei Shield",
+	main="Carnwenhan",
+    sub="Ammurapi Shield",
     range="Gjallarhorn",
-    head="Brioso Roundlet +2",
-    body="Brioso Justau. +2",
-    hands="Brioso Cuffs +2",
-    legs="Brioso Cannions +2",
+    head="Brioso Roundlet +1",
+    body="Fili Hongreline +1",
+    hands="Fili Manchettes +1",
+    legs="Fili Rhingrave +1",
     feet="Brioso Slippers +1",
     neck="Moonbow Whistle +1",
-    waist="Harfner's Sash",
-    left_ear="Musical Earring",
-    right_ear="Aoidos' Earring",
-    left_ring="Stikini Ring +1",
+    waist="Luminary Sash",
+    left_ear="Regal Earring",
+    right_ear="Dignitary's Earring",
+    left_ring="Metamorph Ring +1",
     right_ring="Stikini Ring +1",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
 
 	-- For song defbuffs (accuracy primary, duration secondary)
 	sets.midcast.SongDebuff.Resistant = {    
-	main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
-    sub="Genmei Shield",
+	main="Carnwenhan",
+    sub="Ammurapi Shield",
     range="Gjallarhorn",
-    head="Brioso Roundlet +2",
-    body="Brioso Justau. +2",
-    hands="Brioso Cuffs +2",
-    legs="Brioso Cannions +2",
+    head="Brioso Roundlet +1",
+    body="Fili Hongreline +1",
+    hands="Fili Manchettes +1",
+    legs="Fili Rhingrave +1",
     feet="Brioso Slippers +1",
     neck="Moonbow Whistle +1",
-    waist="Harfner's Sash",
-    left_ear="Musical Earring",
-    right_ear="Aoidos' Earring",
-    left_ring="Stikini Ring +1",
+    waist="Luminary Sash",
+    left_ear="Regal Earring",
+    right_ear="Dignitary's Earring",
+    left_ring="Metamorph Ring +1",
     right_ring="Stikini Ring +1",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 }
@@ -645,14 +646,14 @@ sets.midcast.Prelude = {
 	left_ear="Relaxing Earring"}
 	
 	sets.idle = {    
-    main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+    main="Carnwenhan",
     sub="Genmei Shield",
 	range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Volte Doublet",
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Nyame Sollerets",
     neck="Bathy choker +1",
     waist="Carrier's sash",
     left_ear="Eabani Earring",
@@ -663,14 +664,14 @@ sets.midcast.Prelude = {
 }
 
 	sets.idle.PDT = {    
-    main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+    main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Nyame Sollerets",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Etiolation Earring",
@@ -683,14 +684,14 @@ sets.midcast.Prelude = {
 	-- Defense sets
 
 	sets.defense.PDT = {
-    main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+    main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Nyame Sollerets",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Etiolation Earring",
@@ -701,14 +702,14 @@ sets.midcast.Prelude = {
 }
 
 	sets.defense.MDT = {
-    main={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+    main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Nyame Sollerets",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Etiolation Earring",
