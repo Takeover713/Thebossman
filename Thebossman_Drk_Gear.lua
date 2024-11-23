@@ -139,7 +139,7 @@ function init_gear_sets()
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
          ammo="Egoist's Tathlum",
          head="Ratri Sallet +1",
-         body="Heathen's Cuirass +1",
+         body="Heathen's Cuirass +3",
          hands="Ratri Gadlings +1",
 		 ring1="Moonlight Ring",
          ring2="Moonlight Ring",
@@ -161,7 +161,7 @@ function init_gear_sets()
            
 	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {ammo="Pemphredo Tathlum",
 		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring",ring2="Stikini Ring",
+		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring 1",ring2="Stikini Ring +1",
 		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"})
                    
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
@@ -201,7 +201,7 @@ function init_gear_sets()
     body="Ignominy Cuirass +3",
     hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +5%','STR+7','Accuracy+14','Attack+11',}},
     legs="Fallen's Flanchard +3",
-    feet="Sulev. Leggings +2",
+    feet="Heathen's sollerets +3",
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     ear1="Moonshade Earring",
@@ -258,7 +258,7 @@ function init_gear_sets()
     body="Ignominy Cuirass +3",
     hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +5%','STR+7','Accuracy+14','Attack+11',}},
     legs="Fallen's Flanchard +3",
-    feet="Sulev. Leggings +2",
+    feet="Heathen's sollerets +3",
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     ear1="Moonshade Earring",

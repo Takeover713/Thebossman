@@ -3,7 +3,7 @@ function user_setup()
     state.OffenseMode:options('Normal','Acc')
     state.CastingMode:options('Normal','Resistant','AoE')
     state.IdleMode:options('Normal','PDT')
-	state.Weapons:options('None','DualDaggers','SavageDW','CarnDW','Carn','Savage','Club')
+	state.Weapons:options('None','DualDaggers','SavageDW','CarnDW','Carn','Savage','Club','Proc')
 
 	-- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
@@ -45,6 +45,7 @@ function init_gear_sets()
 	sets.weapons.SavageDW = {main="Naegling",sub="Centovente"}
 	sets.weapons.DualDaggers = {main="Aeneas",sub="Tauret"}
 	sets.weapons.CarnDW = {main="Carnwenhan",sub="Tauret"}
+	sets.weapons.Proc = {main="Blizzard Brand",sub="Qutrub Knife"}
 	--sets.weapons.DualSword = {main="Naegling",sub="Gleti's Knife"}
 	sets.weapons.Carn = {main="Carnwenhan",sub="Genmei Shield"}
 	sets.weapons.Savage = {main="Naegling",sub="Genmei Shield"}
