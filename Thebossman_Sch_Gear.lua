@@ -373,7 +373,7 @@ function init_gear_sets()
 	legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-Obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",
@@ -395,7 +395,7 @@ function init_gear_sets()
 	legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-Obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",
@@ -413,7 +413,7 @@ function init_gear_sets()
 	legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-Obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",
@@ -432,7 +432,7 @@ function init_gear_sets()
     legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-Obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",
@@ -450,7 +450,7 @@ function init_gear_sets()
     legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Mujin Band",
@@ -468,7 +468,7 @@ function init_gear_sets()
     legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Mujin Band",
@@ -491,7 +491,7 @@ function init_gear_sets()
     legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Mujin Band",
@@ -511,7 +511,7 @@ function init_gear_sets()
     legs="Arbatel pants +3",
 	feet="Arbatel loafers +3",
     neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Hachirin-no-obi",
+    waist="Acuity Belt +1",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Mujin Band",
@@ -529,7 +529,8 @@ function init_gear_sets()
     -- Sets to return to when not performing an action.
 
      -- Resting sets
-    sets.resting = {main="Daybreak",
+    sets.resting = {
+	main="Daybreak",
     sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Befouled Crown",
@@ -548,7 +549,8 @@ function init_gear_sets()
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
-    sets.idle = {main="Daybreak",
+    sets.idle = {
+	main="Daybreak",
     sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Befouled Crown",
@@ -734,7 +736,7 @@ function select_default_macro_book()
 end
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 7')
+send_command('wait 10;input /lockstyleset 1')
 end
 
-send_command('wait 2;input /lockstyleset 7')
+send_command('wait 10;input /lockstyleset 1')

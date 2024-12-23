@@ -650,6 +650,13 @@ function user_job_target_change(target)
     return false
 end
 
+
+function sub_job_change(new,old)
+send_command('wait 2;input /lockstyleset 1')
+end
+
+send_command('wait 2;input /lockstyleset 1')
+
 -- function user_self_command(commandArgs, eventArgs)
 	-- if commandArgs[1] == 'rad' then
 	   -- send_command('input /echo waiting; wait 4.5; input //temps buy radialens')

@@ -260,7 +260,7 @@ function init_gear_sets()
     legs="Fallen's Flanchard +3",
     feet="Heathen's sollerets +3",
     neck="Abyssal Beads +2",
-    waist="Fotia Belt",
+    waist="Sailfi belt +1",
     ear1="Moonshade Earring",
     ear2="Thrud Earring",
     ring1="Epaminondas's Ring",
@@ -854,10 +854,10 @@ end
 
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 17')
+send_command('wait 2;input /lockstyleset 1')
 end
 
-send_command('wait 2;input /lockstyleset 17')
+send_command('wait 2;input /lockstyleset 1')
 
 
 -- function user_self_command(commandArgs, eventArgs)

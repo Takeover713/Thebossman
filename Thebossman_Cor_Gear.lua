@@ -80,8 +80,8 @@ function user_setup()
 	--send_command('bind ^q send @cor gs c toggle Autowsmode')
 	--send_command('bind @q send @sam gs c toggle Autowsmode')
 	--send_command('bind !b gs c buffup Full')
-	send_command('bind !m send @geo //geomalaise <t>')
-	send_command('bind !c send @geo //c1 thebo')
+	--send_command('bind !m send @geo //geomalaise <t>')
+	--send_command('bind !c send @geo //c1 thebo')
 
     select_default_macro_book()
 end
@@ -180,7 +180,7 @@ function init_gear_sets()
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }
 
-    sets.precast.CorsairShot['Dark Shot'] = set_combine(sets.precast.CorsairShot['Light Shot'], {feet="Chass. Bottes +1"})
+    sets.precast.CorsairShot['Dark Shot'] = set_combine(sets.precast.CorsairShot['Light Shot'], {feet="Chass. Bottes +3"})
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
@@ -376,12 +376,12 @@ function init_gear_sets()
 	sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
     head="Pixie Hairpin +1",
     body="Lanun Frac +3",
-    --hands="Chasseur's Gants +3",
-	hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
+    hands="Chasseur's Gants +3",
+	--hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
-    waist="Svelt. Gouriz +1",
+    waist="Eschan Stone",
     left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
     left_ring="Dingir Ring",
@@ -392,11 +392,12 @@ function init_gear_sets()
     sets.precast.WS['Leaden Salute'].Acc = {ammo=gear.MAbullet,
     head="Pixie Hairpin +1",
     body="Lanun Frac +3",
-    hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
+	hands="Chasseur's Gants +3",
+    --hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
-    waist="Svelt. Gouriz +1",
+    waist="Eschan Stone",
     left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
     left_ring="Dingir Ring",
@@ -407,7 +408,8 @@ function init_gear_sets()
     sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+15','Weapon skill damage +5%','INT+6','"Mag.Atk.Bns."+6',}},
     body="Lanun Frac +3",
-    hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
+	hands="Chasseur's Gants +3",
+    --hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
@@ -422,7 +424,8 @@ function init_gear_sets()
     sets.precast.WS['Wildfire'].Acc = {ammo=gear.MAbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+15','Weapon skill damage +5%','INT+6','"Mag.Atk.Bns."+6',}},
     body="Lanun Frac +3",
-    hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
+	hands="Chasseur's Gants +3",
+    --hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
@@ -627,17 +630,17 @@ function init_gear_sets()
 }
     
     sets.engaged.Acc = {
-    head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+	head="Malignance Chapeau",
+    body="Malignance Tabard",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Triple Atk."+3','STR+5','Accuracy+11','Attack+15',}},
-    neck="Lissome Necklace",
-    waist="Windbuffet Belt +1",
+    legs="Chasseur's Culottes +3",
+    feet="Malignance Boots",
+    neck="Combatant's Torque",
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    left_ring="Petrov Ring",
-    right_ring="Epona's Ring",
+    left_ring="Chirich Ring +1",
+    right_ring="Vocane Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -657,17 +660,17 @@ function init_gear_sets()
 }
     
     sets.engaged.DW.Acc = {
-    head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Triple Atk."+3','STR+5','Accuracy+11','Attack+15',}},
-    neck="Lissome Necklace",
+    legs="Chasseur's Culottes +3",
+    feet="Malignance Boots",
+    neck="Combatant's Torque",
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    left_ring="Petrov Ring",
-    right_ring="Epona's Ring",
+    left_ring="Chirich Ring +1",
+    right_ring="Vocane Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -675,13 +678,13 @@ function init_gear_sets()
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs="Malignance Tights",
+    legs="Chasseur's Culottes +3",
     feet="Malignance Boots",
-    neck="Lissome Necklace",
+    neck="Combatant's Torque",
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Vocane Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
@@ -690,13 +693,13 @@ function init_gear_sets()
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs="Malignance Tights",
+    legs="Chasseur's Culottes +3",
     feet="Malignance Boots",
-    neck="Lissome Necklace",
+    neck="Combatant's Torque",
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Vocane Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
@@ -755,10 +758,10 @@ function select_default_macro_book()
 end
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 17')
+send_command('wait 10;input /lockstyleset 17')
 end
 
-send_command('wait 2;input /lockstyleset 17')
+send_command('wait 10;input /lockstyleset 17')
 
 -- function user_self_command(commandArgs, eventArgs)
 	-- if commandArgs[1] == 'buff' then

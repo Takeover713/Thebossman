@@ -14,19 +14,22 @@ function user_setup()
     state.UseCustomTimers = M(false, 'Use Custom Timers')
 	
 	-- Additional local binds
-    send_command('bind ^` gs c cycle ExtraSongsMode')
+    --send_command('bind ^` gs c cycle ExtraSongsMode')
 	send_command('bind !` input /ma "Chocobo Mazurka" <me>')
-	send_command('bind @` gs c cycle MagicBurstMode')
-	send_command('bind @f10 gs c cycle RecoverMode')
-	send_command('bind @f8 gs c toggle AutoNukeMode')
-	send_command('bind !q gs c weapons NukeWeapons;gs c update')
-	send_command('bind ^q gs c weapons Swords;gs c update')
-	send_command('bind !d send @all gs c buff')
-	send_command('bind !q send @brd //hordelullaby2 <bt>')
-	send_command('bind !a sat alltarget')
-	send_command('bind ^d send rafleshia gs c oboss')
-	send_command('bind !s send @whm sacrosanctity')
-	send_command('bind !f send @geo fullcircle ')
+	--send_command('bind @` gs c cycle MagicBurstMode')
+	--send_command('bind @f10 gs c cycle RecoverMode')
+	--send_command('bind @f8 gs c toggle AutoNukeMode')
+	--send_command('bind !q gs c weapons NukeWeapons;gs c update')
+	--send_command('bind ^q gs c weapons Swords;gs c update')
+	--send_command('bind !d send @all gs c buff')
+	--send_command('bind !q send @brd //hordelullaby2 <bt>')
+	--send_command('bind !a sat alltarget')
+	--send_command('bind ^d send rafleshia gs c oboss')
+	--send_command('bind !s send @whm sacrosanctity')
+	--send_command('bind !f send @geo fullcircle ')
+	
+	autows = 'Savage Blade'
+	autowstp = 1250
 
 
 	select_default_macro_book(8, 6)
@@ -441,7 +444,7 @@ sets.midcast.Etude = {
 	main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
-    head="Fili Calot +1",
+    head="Mousai Turban +1",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
     legs="Inyanga Shalwar +2",
@@ -808,7 +811,7 @@ function select_default_macro_book()
 end
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 16')
+send_command('wait 2;input /lockstyleset 1')
 end
 
-send_command('wait 2;input /lockstyleset 16')
+send_command('wait 2;input /lockstyleset 1')
