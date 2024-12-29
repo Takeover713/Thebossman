@@ -7,7 +7,7 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
-	state.Weapons:options('LeadenMelee','LeadenMelee2','Earp','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon') -- ('Default','AeolianWeapons','DualWeapons','SavageWeapons','DualRangedWeapons','LeadenWeapons','LastStand','None')
+	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon') -- ('Default','AeolianWeapons','DualWeapons','SavageWeapons','DualRangedWeapons','LeadenWeapons','LastStand','None')
 	state.CompensatorMode:options('Always','300','Never','1000')
 
     gear.RAbullet = "Chrono Bullet" -- Chrono Bullet
@@ -218,6 +218,7 @@ function init_gear_sets()
 		neck="Commodore Charm +2",
         body="Laksa. Frac +3",
 		hands={ name="Lanun Gants +3", augments={'Enhances "Fold" effect',}},
+		Left_ring="Crepuscular Ring",
 		back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},
 		waist="Yemaya Belt",
 		legs="Adhemar kecks +1",
@@ -413,7 +414,7 @@ function init_gear_sets()
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
-    waist="Hachirin-no-Obi",
+    waist="Eschan Stone",
     left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
     left_ring="Dingir Ring",
@@ -429,7 +430,7 @@ function init_gear_sets()
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
     feet="Lanun Bottes +3",
     neck="Commodore Charm +2",
-    waist="Hachirin-no-Obi",
+    waist="Eschan Stone",
     left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
     left_ring="Dingir Ring",
@@ -441,7 +442,21 @@ function init_gear_sets()
     sets.precast.WS['Hot Shot'].Acc = sets.precast.WS['Wildfire'].Acc
 		
 		--Because omen skillchains.
-    sets.precast.WS['Burning Blade'] = {ammo=gear.RAbullet,}
+    sets.precast.WS['Burning Blade'] = {ammo=gear.MAbullet,
+	head={ name="Herculean Helm", augments={'Mag. Acc.+15','Weapon skill damage +5%','INT+6','"Mag.Atk.Bns."+6',}},
+    body="Lanun Frac +3",
+	hands="Chasseur's Gants +3",
+    --hands={ name="Herculean Gloves", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +4%',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Weapon skill damage +5%','INT+8',}},
+    feet="Lanun Bottes +3",
+    neck="Commodore Charm +2",
+    waist="Eschan Stone",
+    left_ear="Moonshade Earring",
+    right_ear="Friomisi Earring",
+    left_ring="Dingir Ring",
+    right_ring="Epaminondas's Ring",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+	}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {}
@@ -594,13 +609,13 @@ function init_gear_sets()
 	--sets.weapons.DualWeapons = {main="Fettering Blade",sub="Blurred Knife +1",range="Death Penalty"} -- Folmalhaut, Blurred Knife +1 , main Fettering Blade
 	--sets.weapons.RollMeleeWeapons = {main="Hep. Sapara +1",sub="Blurred Knife +1",range="Compensator"}
 	--sets.weapons.RollRangedWeapons = {main="Fettering Blade",sub="Kustawi +1",range="Compensator"}
-	sets.weapons.SavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
+	sets.weapons.SavageWeapons = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
 	sets.weapons.SavageWeapon = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
 	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
 	--sets.weapons.DualRangedWeapons = {main="Fettering Blade",sub="Kustawi +1"}
 	sets.weapons.LeadenMelee = {main="Naegling",sub='Tauret',range="Death Penalty"}
 	sets.weapons.LeadenMelee2 = {main={ name="Rostam", augments={'Path: B',}},sub='Tauret',range="Death Penalty"}
-	sets.weapons.Earp = {main="Naegling",sub="Blurred Knife +1",range="Earp"}
+	--sets.weapons.Earp = {main="Naegling",sub="Gleti's Knife",range="Earp"}
 	sets.weapons.LeadenRanged = {main={ name="Rostam", augments={'Path: A',}},sub='Tauret',range="Death Penalty"}
 	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
 	--sets.weapons.RostamRanged = {main="Rostam",sub={name="Rostam", bag="Wardrobe 3"},range="Death Penalty"}

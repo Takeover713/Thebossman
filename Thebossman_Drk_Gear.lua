@@ -9,7 +9,7 @@ function user_setup()
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Caladbolg','Trial','Anguta','Apocalypse','Loxotic','Naegling')
+	state.Weapons:options('Caladbolg','Anguta','Apocalypse','Loxotic','Naegling')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 	
@@ -57,7 +57,7 @@ function user_setup()
 	send_command('bind @x send @smn //voltstrike <t>')
 	send_command('bind ^x send @smn //apogee')
 	send_command('bind !/ send @run //vivaciouspulse')
-	send_command('bind !b gs c buffup')
+	--send_command('bind !b gs c buffup')
 	send_command('bind !pause gs c toggle AutoBuffMode')
 	send_command('bind !c send @geo c1 thebo')
 	
@@ -419,7 +419,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Brutal Earring",
     right_ear="Telos Earring",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
@@ -432,9 +432,9 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Telos Earring",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
@@ -447,9 +447,9 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Telos Earring",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
@@ -462,9 +462,9 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Telos Earring",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
@@ -495,7 +495,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     ear1="Cessance Earring",
     ear2="Telos Earring",
-	left_ring="Petrov Ring",
+	left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
 	
@@ -826,7 +826,7 @@ function init_gear_sets()
 	
 	-- Weapons sets
 	sets.weapons.Caladbolg = {main="Caladbolg",sub="Utu Grip"}
-	sets.weapons.Trial = {main="Sword of Trials",sub="Utu Grip"}
+	--sets.weapons.Trial = {main="Sword of Trials",sub="Utu Grip"}
 	sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
 	sets.weapons.Loxotic = {main="Loxotic Mace +1",sub="Blurred Shield +1"}
@@ -854,10 +854,10 @@ end
 
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 1')
+send_command('wait 10;input /lockstyleset 1')
 end
 
-send_command('wait 2;input /lockstyleset 1')
+send_command('wait 10;input /lockstyleset 1')
 
 
 -- function user_self_command(commandArgs, eventArgs)
