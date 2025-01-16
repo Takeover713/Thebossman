@@ -7,7 +7,7 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
-	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon') -- ('Default','AeolianWeapons','DualWeapons','SavageWeapons','DualRangedWeapons','LeadenWeapons','LastStand','None')
+	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon')
 	state.CompensatorMode:options('Always','300','Never','1000')
 
     gear.RAbullet = "Chrono Bullet" -- Chrono Bullet
@@ -23,14 +23,10 @@ function user_setup()
 	-- gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
 	-- gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 	
-	autows = 'Savage Blade'
 	autowstp = 1250
-	
 	autofood = 'Sublime sushi +1'
 
     -- Additional local binds
-	--send_command('bind !pageup ffo me')
-	--send_command('bind !pagedown ffo stopall')
 	send_command('bind !f11 gs c cycle ExtraMeleeMode')
 	send_command('bind ^` gs c cycle ElementalMode')
 	send_command('bind !` gs c elemental quickdraw')
@@ -49,38 +45,13 @@ function user_setup()
 	--send_command('bind @q gs c weapons MaccWeapons;gs c update')
 	--send_command('bind ^q gs c weapons DualRangedWeapons;gs c update')
 	--send_command('bind !q gs c weapons SavageWeapons;gs c update')
-	--send_command('bind @pause roller roll')
-	--send_command('bind !d send @all gs c buff')
-	--send_command('bind @d send @brd gs c buff3')
-	--send_command('bind ^d send @brd gs c oboss')
-	--send_command('bind !q send @brd //hordelullaby2 <bt>')
-	--send_command('bind ^d send rafleshia gs c oboss')
-	--send_command('bind !a sat alltarget')
-	--send_command('bind !a send @others sat alltarget')
-	--send_command('bind !s send @whm sacrosanctity')
-	--send_command('bind !h send @whm hb on')
-	--send_command('bind ^h send @geo hb on')
-	--send_command('bind @h send @brd hb on')
-	--send_command('bind !f send @others gs c attackbt')
+	-- send_command('bind !x send @smn //thunderspark <t>')
+	-- send_command('bind ![ send @geo //fira3 <t>')
+	-- send_command('bind !] send @geo //Thundara3 <t>')
+	-- send_command('bind @x send @smn //voltstrike <t>')
+	-- send_command('bind ^x send @smn //apogee')
 	--send_command('bind !t send @run gs c toggle Autotankmode')
-	--send_command('bind !z send @cor //leadensalute <t>')
-	--send_command('bind !v send @geo //fullcircle')
-	send_command('bind !x send @smn //thunderspark <t>')
-	send_command('bind ![ send @geo //fira3 <t>')
-	send_command('bind !] send @geo //Thundara3 <t>')
-	send_command('bind @x send @smn //voltstrike <t>')
-	send_command('bind ^x send @smn //apogee')
-	--send_command('bind !t send @run gs c toggle Autotankmode')
-	send_command('bind !/ send @run //vivaciouspulse')
-	--send_command('bind !b gs c buffup')
-	send_command('bind !pause gs c toggle AutoBuffMode')
-	--send_command('bind !a send @others /assist Thebossman')
-	--send_command('bind !s send @whm sacrosanctity')
-	--send_command('bind !f send @others gs c attackbt')
-	--send_command('bind ^q send @cor gs c toggle Autowsmode')
-	--send_command('bind @q send @sam gs c toggle Autowsmode')
-	--send_command('bind !b gs c buffup Full')
-	--send_command('bind !m send @geo //geomalaise <t>')
+	--send_command('bind !/ send @run //vivaciouspulse')
 	--send_command('bind !c send @geo //c1 thebo')
 
     select_default_macro_book()
@@ -119,7 +90,8 @@ function init_gear_sets()
     sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, {body="Chasseur's Frac +3"})
     sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, {hands="Chasseur's Gants +3"})
     
-    sets.precast.CorsairShot = {ammo=gear.QDbullet,
+    sets.precast.CorsairShot = {
+	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
     body="Lanun Frac +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
@@ -134,7 +106,8 @@ function init_gear_sets()
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }
 		
-	sets.precast.CorsairShot.Damage = {ammo=gear.QDbullet,
+	sets.precast.CorsairShot.Damage = {
+	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
     body="Lanun Frac +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
@@ -149,7 +122,8 @@ function init_gear_sets()
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }
 	
-    sets.precast.CorsairShot.Proc = {ammo=gear.QDbullet,
+    sets.precast.CorsairShot.Proc = {
+	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
     body="Lanun Frac +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
@@ -164,7 +138,8 @@ function init_gear_sets()
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }
 
-    sets.precast.CorsairShot['Light Shot'] = {ammo=gear.QDbullet,
+    sets.precast.CorsairShot['Light Shot'] = {
+	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
     body="Lanun Frac +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
@@ -306,7 +281,7 @@ function init_gear_sets()
 	hands="Chasseur's Gants +3",
     legs={ name="Herculean Trousers", augments={'Accuracy+24 Attack+24','Weapon skill damage +5%','Attack+3',}},
     feet="Lanun Bottes +3",
-    neck="Commodore Charm +2",
+    neck="Rep. Plat. Medal",
     waist="Sailfi belt +1",
     left_ear="Moonshade Earring",
     right_ear="Ishvara Earring",
@@ -322,7 +297,7 @@ function init_gear_sets()
     hands="Chasseur's Gants +3",
     legs={ name="Herculean Trousers", augments={'Accuracy+24 Attack+24','Weapon skill damage +5%','Attack+3',}},
     feet="Lanun Bottes +3",
-    neck="Commodore Charm +2",
+    neck="Rep. Plat. Medal",
     waist="Sailfi belt +1",
     left_ear="Moonshade Earring",
     right_ear="Ishvara Earring",
@@ -481,7 +456,8 @@ function init_gear_sets()
     sets.midcast.Utsusemi = sets.midcast.FastRecast
 
     -- Ranged gear
-    sets.midcast.RA = {ammo=gear.RAbullet,
+    sets.midcast.RA = {
+	ammo=gear.RAbullet,
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
@@ -498,12 +474,15 @@ function init_gear_sets()
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
 }
 
-    sets.midcast.RA.Acc = {ammo=gear.RAbullet,
-    head="Meghanada Visor +2",
-    body="Mummu Jacket +2",
-    hands={ name="Adhemar Wrist. +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
-    legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
-    feet={ name="Adhe. Gamashes +1", augments={'HP+65','"Store TP"+7','"Snapshot"+10',}},
+    sets.midcast.RA.Acc = {
+	ammo=gear.RAbullet,
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    --legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
+	legs="Malignance Tights",
+    --feet={ name="Adhe. Gamashes +1", augments={'HP+65','"Store TP"+7','"Snapshot"+10',}},
+	feet="Malignance Boots",
     neck="Iskur Gorget",
     waist="Yemaya Belt",
     left_ear="Telos Earring",
@@ -534,7 +513,8 @@ function init_gear_sets()
     
 
     -- Idle sets
-    sets.idle = {ammo=gear.RAbullet,
+    sets.idle = {
+	ammo=gear.RAbullet,
 	head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
@@ -549,73 +529,26 @@ function init_gear_sets()
     back="Moonbeam Cape",
 }
 		
-    sets.idle.Refresh = {ammo=gear.RAbullet,
-        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-        body="Mekosu. Harness",hands=gear.herculean_refresh_hands,ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Flume Belt",legs="Rawhide Trousers",feet=gear.herculean_dt_feet}
+    sets.idle.Refresh = {}
     
     -- Defense sets
-    sets.defense.PDT = {ammo=gear.RAbullet,
-	head="Meghanada Visor +2",
-    body="Mekosu. Harness",
-    hands="Meg. Gloves +2",
-    legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +2",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Odnowa Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Defending Ring",
-    right_ring="Vocane Ring",
-    back="Moonbeam Cape",
-}
+    sets.defense.PDT = {}
 
-    sets.defense.MDT = {ammo=gear.RAbullet,
-	head="Meghanada Visor +2",
-    body="Mekosu. Harness",
-    hands="Meg. Gloves +2",
-    legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +2",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Odnowa Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Defending Ring",
-    right_ring="Vocane Ring",
-    back="Moonbeam Cape",
-}
+    sets.defense.MDT = {}
 		
-    sets.defense.MEVA = {ammo=gear.RAbullet,
-	head="Meghanada Visor +2",
-    body="Mekosu. Harness",
-    hands="Meg. Gloves +2",
-    legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +2",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Odnowa Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Defending Ring",
-    right_ring="Vocane Ring",
-    back="Moonbeam Cape",
-}
+    sets.defense.MEVA = {}
 
     sets.Kiting = {legs="Carmine Cuisses +1",feet="Hermes' Sandals +1"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
 
 	-- Weapons sets
-	--sets.weapons.Default = {main="Fettering Blade",sub="Nusku Shield",range="Fomalhaut"} -- Fettering Blade Nusku Shield
-	--sets.weapons.DualWeapons = {main="Fettering Blade",sub="Blurred Knife +1",range="Death Penalty"} -- Folmalhaut, Blurred Knife +1 , main Fettering Blade
-	--sets.weapons.RollMeleeWeapons = {main="Hep. Sapara +1",sub="Blurred Knife +1",range="Compensator"}
-	--sets.weapons.RollRangedWeapons = {main="Fettering Blade",sub="Kustawi +1",range="Compensator"}
 	sets.weapons.SavageWeapons = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
 	sets.weapons.SavageWeapon = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
 	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
-	--sets.weapons.DualRangedWeapons = {main="Fettering Blade",sub="Kustawi +1"}
 	sets.weapons.LeadenMelee = {main="Naegling",sub='Tauret',range="Death Penalty"}
 	sets.weapons.LeadenMelee2 = {main={ name="Rostam", augments={'Path: B',}},sub='Tauret',range="Death Penalty"}
-	--sets.weapons.Earp = {main="Naegling",sub="Gleti's Knife",range="Earp"}
+	--sets.weapons.Prime = {main="Naegling",sub="Gleti's Knife",range="Earp"}
 	sets.weapons.LeadenRanged = {main={ name="Rostam", augments={'Path: A',}},sub='Tauret',range="Death Penalty"}
 	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
 	--sets.weapons.RostamRanged = {main="Rostam",sub={name="Rostam", bag="Wardrobe 3"},range="Death Penalty"}
@@ -655,7 +588,7 @@ function init_gear_sets()
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Chirich Ring +1",
-    right_ring="Vocane Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -685,7 +618,7 @@ function init_gear_sets()
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Chirich Ring +1",
-    right_ring="Vocane Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -700,7 +633,7 @@ function init_gear_sets()
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Chirich Ring +1",
-    right_ring="Vocane Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -715,47 +648,12 @@ function init_gear_sets()
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Chirich Ring +1",
-    right_ring="Vocane Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
 
 end
 
-function check_trust()
-	if not moving then
-		if state.AutoTrustMode.value and not areas.Cities:contains(world.area) and (buffactive['Elvorseal'] or buffactive['Reive Mark'] or not player.in_combat) then
-			local party = windower.ffxi.get_party()
-			if party.p5 == nil then
-				local spell_recasts = windower.ffxi.get_spell_recasts()
-			
-				if spell_recasts[980] < spell_latency and not have_trust("Yoran-Oran") then
-					windower.send_command('input /ma "Yoran-Oran (UC)" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[952] < spell_latency and not have_trust("Koru-Moru") then
-					windower.send_command('input /ma "Koru-Moru" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[979] < spell_latency and not have_trust("Selh'teus") then
-					windower.send_command('input /ma "Selh\'teus" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[1013] < spell_latency and not have_trust("Lilisette") then
-					windower.send_command('input /ma "Lilisette II" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[914] < spell_latency and not have_trust("Ulmia") then
-					windower.send_command('input /ma "Ulmia" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				else
-					return false
-				end
-			end
-		end
-	end
-	return false
-end
 
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
@@ -772,106 +670,13 @@ function select_default_macro_book()
 
 end
 
+
+autows_list = {['LeadenMelee']='Leaden Salute',['LeadenMelee2']='Leaden Salute',['SavageWeapons']='Savage Blade',['LastStand']='Last Stand',['SavageWeapon']='Savage Blade',['AeolianWeapons']='Aeolian Edge'}
+
+
+
 function sub_job_change(new,old)
 send_command('wait 10;input /lockstyleset 17')
 end
 
-send_command('wait 10;input /lockstyleset 17')
 
--- function user_self_command(commandArgs, eventArgs)
-	-- if commandArgs[1] == 'buff' then
-	   -- send_command('input //roller roll')
-       -- add_to_chat(158,'Rolling')
-	-- elseif commandArgs[1] == 'rad' then
-	   -- send_command('input /echo waiting; wait 4.5; input //temps buy radialens')
-       -- add_to_chat(158,'Radialens')
-	-- elseif commandArgs[1] == 'ewz' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew z')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew1' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 1')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew2' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 2')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew3' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 3')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew4' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 4')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew5' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 5')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew6' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 6')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew7' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 7')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew8' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 8')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew9' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 9')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew10' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 10')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew11' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 11')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew12' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 12')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew13' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 13')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew14' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 14')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew15' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 15')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'stop' then
-        -- windower.ffxi.run(false)
-        -- windower.ffxi.follow()
-		-- add_to_chat(158,'Chillin')
-	-- elseif commandArgs[1] == 'food' then
-       -- send_command('input /item "Sublime Sushi +1" <me>')
-       -- add_to_chat(158,'Eating')
-	-- elseif commandArgs[1] == 'attackbt' then
-		-- send_command('input /attack <bt>')
-		-- add_to_chat(158,'Attack bt')
-	-- elseif commandArgs[1] == 'charm' then
-       -- send_command('input /item "Charm Buffer" <me>')
-       -- add_to_chat(158,'Charm buffer')
-	-- elseif commandArgs[1] == 'wing1' then
-       -- send_command('input /item "Lucid Wings I" <me>')
-       -- add_to_chat(158,'Lucid Wings I')
-	-- elseif commandArgs[1] == 'wing2' then
-       -- send_command('input /item "Lucid Wings II" <me>')
-       -- add_to_chat(158,'Lucid Wings II')
-	-- elseif commandArgs[1] == 'wing3' then
-       -- send_command('input /item "Daedalus wing" <me>')
-       -- add_to_chat(158,'Daedalus wing')
-	-- elseif commandArgs[1] == 'super' then
-       -- send_command('input /item "Super Revitalizer" <me>')
-       -- add_to_chat(158,'Super Revitalizer')
-	-- elseif commandArgs[1] == 'doom' then
-       -- send_command('input /item "Savior\'s Tonic" <me>')
-       -- add_to_chat(158,'Savior tonic')
-	-- elseif commandArgs[1] == 'pois' then
-       -- send_command('input /item "Poison Buffer" <me>')
-       -- add_to_chat(158,'Poison Buffer')
-	-- elseif commandArgs[1] == 'amne' then
-       -- send_command('input /item "Moneta\'s Tonic"  <me>')
-       -- add_to_chat(158,'Monetas Tonic')
-	-- elseif commandArgs[1] == 'petri' then
-       -- send_command('input /item "Mirror\'s Tonic" <me>')
-       -- add_to_chat(158,'Mirrors Tonic')
-	-- elseif commandArgs[1] == 'pote' then
-       -- send_command('input /item "Champion\'s Drink" <me>')
-       -- add_to_chat(158,'Champions Drink')
-	-- end
--- end

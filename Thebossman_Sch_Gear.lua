@@ -566,7 +566,8 @@ function init_gear_sets()
     right_ring="Stikini Ring +1",
     back="Solemnity Cape",}
 
-    sets.idle.PDT = {main="Malignance Pole",
+    sets.idle.PDT = {
+	main="Malignance Pole",
     sub="Irenic Strap +1",
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
@@ -580,7 +581,8 @@ function init_gear_sets()
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
     right_ring="Vocane Ring",
-    back="Moonbeam Cape",}
+    back="Moonbeam Cape",
+	}
 		
 	sets.idle.Hippo = set_combine(sets.idle.PDT, {feet="Hippo. Socks +1"})
 

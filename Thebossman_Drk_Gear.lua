@@ -2,18 +2,22 @@ function user_setup()
 	-- Options: Override default values
 	
 	--hi tim
-    state.OffenseMode:options('Normal','SomeAcc','Acc','FullAcc','Fodder')
+    state.OffenseMode:options('Normal','FullAcc')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','FullAcc','Fodder')
     state.HybridMode:options('Normal','DTLite','Subtle')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT','Refresh','Reraise')
-	state.Weapons:options('Caladbolg','Anguta','Apocalypse','Loxotic','Naegling')
+	state.Weapons:options('Caladbolg','Anguta','Foenaria','Apocalypse','Loxotic','Naegling')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
+	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
 	
-	autows = 'Torcleaver'
+	
+	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Entropy',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
+	
+	-- autows = 'Torcleaver'
 	autowstp = 1500
 	
 	autofood = 'Sublime sushi +1'
@@ -31,34 +35,10 @@ function user_setup()
 }
 
 	-- Additional local binds
-	--send_command('bind !pageup ffo me')
-	--send_command('bind !pagedown ffo stopall')
 	send_command('bind ^` input /ja "Hasso" <me>')
 	send_command('bind !` input /ja "Seigan" <me>')
     --send_command('bind !f11 gs c cycle ExtraMeleeMode')
 	send_command('bind @` gs c cycle SkillchainMode')
-	--send_command('bind !d send @all gs c buff')
-	--send_command('bind !q send @brd //hordelullaby2 <bt>')
-	--send_command('bind !a sat alltarget')
-	--send_command('bind ^d send rafleshia gs c oboss')
-	--send_command('bind !s send @whm sacrosanctity')
-	--send_command('bind !h send @whm hb on')
-	--send_command('bind ^h send @geo hb on')
-	--send_command('bind @h send @brd hb on')
-	--send_command('bind !f send @others gs c attackbt')
-	--send_command('bind ^q send @run gs c toggle Autotankmode')
-	--send_command('bind ^q send @cor gs c toggle Autowsmode')
-	--send_command('bind @q send @sam gs c toggle Autowsmode')
-	send_command('bind !z send @cor //leadensalute <t>')
-	--send_command('bind !v send @geo //fullcircle')
-	send_command('bind !x send @smn //thunderspark <t>')
-	send_command('bind ![ send @geo //fira3 <t>')
-	send_command('bind !] send @geo //Thundara3 <t>')
-	send_command('bind @x send @smn //voltstrike <t>')
-	send_command('bind ^x send @smn //apogee')
-	send_command('bind !/ send @run //vivaciouspulse')
-	--send_command('bind !b gs c buffup')
-	send_command('bind !pause gs c toggle AutoBuffMode')
 	send_command('bind !c send @geo c1 thebo')
 	
 	select_default_macro_book()
@@ -73,11 +53,11 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Diabolic Eye'] = {hands="Fallen's Finger Gauntlets +3"}
 	sets.precast.JA['Arcane Circle'] = {feet="Ig. Sollerets +1"}
-	sets.precast.JA['Souleater'] = {head="Ig. Burgonet +3"}
-	sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +1"}
-	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard +1"}
+	sets.precast.JA['Souleater'] = {head="Ig. Burgeonet +3"}
+	sets.precast.JA['Weapon Bash'] = {hands="Igno. Gauntlets +3"}
+	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard +3"}
 	sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +1"}
-	sets.precast.JA['Dark Seal'] = {head="Fallen's Burgeonet +1"}
+	sets.precast.JA['Dark Seal'] = {head="Fallen's Burgeonet +3"}
 	sets.precast.JA['Last Resort'] = {back="Ankou's Mantle"}
                    
 	-- Waltz set (chr and vit)
@@ -92,19 +72,21 @@ function init_gear_sets()
 		   
 	-- Fast cast sets for spells
 
-	sets.precast.FC = {ammo="Sapience Orb",
-    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-    body={ name="Odyss. Chestplate", augments={'"Fast Cast"+6','INT+3','Mag. Acc.+2','"Mag.Atk.Bns."+13',}},
-    hands={ name="Leyline Gloves", augments={'Accuracy+12','Mag. Acc.+14','"Mag.Atk.Bns."+15','"Fast Cast"+2',}},
-    legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
-    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
-    neck="Voltsurge Torque",
-    waist="Flume Belt +1",
-    ear1="Loquac. Earring",
-    ear2="Etiolation Earring",
-    ring1="Kishar Ring",
-    ring2="Prolix Ring",
-    back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},}
+	sets.precast.FC = {
+		ammo="Sapience Orb",
+		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		body="Sacro Breastplate",
+		hands="Leyline Gloves", 
+		legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
+		feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
+		neck="Voltsurge Torque",
+		waist="Plat. Mog. Belt",
+		ear1="Malignance Earring",
+		ear2="Loquac. Earring",
+		ring1="Kishar Ring",
+		ring2="Prolix Ring",
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
 
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
 		
@@ -115,26 +97,53 @@ function init_gear_sets()
 		back="Moonlight Cape",waist="Tempus Fugit",legs=gear.odyssean_fc_legs,feet="Odyssean Greaves"}
                    
 	-- Specific spells
+	
+	sets.midcast['Elemental Magic'] = {
+		ammo="Pemphredo Tathlum",
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Fall. Cuirass +1", augments={'Enhances "Blood Weapon" effect',}},
+		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Heath. Sollerets +3",
+		neck="Sibyl Scarf",
+		waist="Eschan Stone",
+		left_ear="Malignance Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Shiva Ring +1",
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- need a nuke ambu cape
+	}
  
 	sets.midcast['Dark Magic'] = {
          ammo="Pemphredo Tathlum", 
-         head="Ig. burgonet +3", -- 17
-         neck="Erra Pendant", -- 10
-         ear1="Gwati Earring",
-         ear2="Dignitary's Earring",
-         body={ name="Carm. Sc. Mail +1", augments={'MP+80','INT+12','MND+12',}}, --5
-         hands="Fallen's Finger Gauntlets +3", -- 14
+         head="Ig. burgeonet +3", 
+         neck="Erra Pendant", 
+         ear1="Dark Earring",
+         ear2="Mani Earring",
+         body={ name="Carm. Sc. Mail +1", augments={'MP+80','INT+12','MND+12',}}, 
+         hands="Fallen's Finger Gauntlets +3", 
          waist="Casso Sash", -- 5
          ring1="Evanescence Ring", -- 10
-         ring2="Archon Ring",
-        back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}, -- 10
-         legs="Eschite Cuisses",  -- 20
+         ring2="Stikini Ring +1",
+		 back="Niht Mantle",
+         legs="Heath. Flachard +3",  -- 20
          feet="Ratri Sollerets +1"}
            
-	sets.midcast['Enfeebling Magic'] = {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
+	sets.midcast['Enfeebling Magic'] = {
+		ammo="Pemphredo Tathlum",
+		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		body="Ignominy Cuirass +3",
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Heath. Sollerets +3",
+		neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+		waist="Casso Sash",
+		left_ear="Malignance Earring",
+		right_ear="Digni. Earring",
+		left_ring="Kishar Ring",
+		right_ring="Stikini Ring +1",
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		}
 		   
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
          ammo="Egoist's Tathlum",
@@ -149,38 +158,66 @@ function init_gear_sets()
 		 neck="Sanctity Necklace",
 		 ear1="Odnowa Earring",
 		 ear2="Odnowa Earring +1",
-		 waist="Eschan Stone",})
+		 waist="Plat. Mog. Belt",})
 		 
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], {
          back="Chuparrosa Mantle",
-		 head="Ig. burgonet +3",
+		 head="Ig. burgeonet +3",
          ring1="Kishar Ring",
 		 feet="Ratri Sollerets +1",
 		 ear1="Gwati Earring",
 		 ear2="Dignitary's Earring",})
            
-	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {ammo="Pemphredo Tathlum",
-		head="Carmine Mask +1",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-		body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Stikini Ring 1",ring2="Stikini Ring +1",
-		back="Toro Cape",waist="Eschan Stone",legs="Eschite Cuisses",feet="Flam. Gambieras +2"})
+	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {
+		ammo="Pemphredo Tathlum",
+		head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
+		body="Fall. Cuirass +1", -- upgrade to +3
+		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Rat. Sollerets +1",
+		neck="Erra Pendant",
+		waist="Eschan Stone",
+		left_ear="Malignance Earring",
+		right_ear="Digni. Earring",
+		left_ring="Kishar Ring",
+		right_ring="Stikini Ring +1",
+		back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		})
                    
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
          ear1="Hirudinea Earring",
          ear2="Dignitary's Earring",
          body={ name="Carm. Sc. Mail +1", augments={'MP+80','INT+12','MND+12',}},
-		 head="Fallen's Burgeonet +1",
+		 head="Fallen's Burgeonet +3",
 		 ring1="Evanescence Ring",
          ring2="Excelsis Ring",
 		 hands="Fall. Fin. Gaunt. +3",
 		 ammo="Pemphredo Tathlum",
-		back={ name="Niht Mantle", augments={'Attack+15','Dark magic skill +10','"Drain" and "Aspir" potency +24',}},
-		 legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
-		 waist="Hachirin-no-Obi",
+		 back={ name="Niht Mantle", augments={'Attack+15','Dark magic skill +10','"Drain" and "Aspir" potency +24',}},
+		 legs="Heath. Flachard +3",
+		 waist="Austerity Belt +1",
 		 feet="Ratri Sollerets +1"})
                    
 	sets.midcast.Aspir = sets.midcast.Drain
 	
-	sets.midcast.Impact = set_combine(sets.midcast['Dark Magic'], {head=empty,body="Twilight Cloak"})
+	sets.midcast.Impact = set_combine(sets.midcast['Dark Magic'], {
+	ammo="Pemphredo Tathlum",
+	head=empty,
+	neck="Erra Pendant", 
+	body="Twilight Cloak",
+	hands="Nyame Gauntlets",
+	ring1="Archon Ring",
+    ring2="Stikini Ring +1",
+	legs="Nyame Flachard",
+	ear1="Dark Earring", -- Crep. Earring
+	ear2="Dignitary's Earring",
+	waist="Oneiros Rope",
+	feet="Heath. Sollerets +3",
+	back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	-- replace fast cast with magic acc +10, STP +10, PDT -10%
+	})
+	
+	
 	
 	sets.DrainWeapon = {main="Misanthropy",sub="Alber Strap"}
 	
@@ -205,7 +242,7 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     ear1="Moonshade Earring",
-    ear2="Ishvara Earring",
+    ear2="Thrud Earring",
     ring1="Regal Ring",
     ring2="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -215,20 +252,87 @@ function init_gear_sets()
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
+	
+	
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+	ammo="Knobkierrie",
+    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+    body="Ignominy Cuirass +3",
+    hands="Rat. Gadlings +1",
+    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Epaminondas's Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		})
+	
+    sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+		
+	sets.precast.WS['Origin'] = set_combine(sets.precast.WS, {
+	ammo="Knobkierrie",
+    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+    body="Ignominy Cuirass +3",
+    hands="Rat. Gadlings +1",
+    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Regal Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		})
+	
+    sets.precast.WS['Origin'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Origin'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Origin'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Origin'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+	
+	
+	
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {head="Ratri Sallet +1",
+    sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
+	head="Ratri Sallet +1",
 	hands="Ratri Gadlings +1",
 	feet="Ratri Sollerets +1",
 	ring1="Epaminondas's Ring",
 	ear1="Lugra earring +1",
 	ear2="Thrud Earring"})
+	
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS['Catastrophe'], {ear1="Moonshade Earring"}) 
+	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS['Catastrophe'], {
+	ammo="Knobkierrie",
+   -- head="Heath. Burgeon. +2",
+	head="Hjarrandi Helm",
+    neck="Abyssal Beads +2",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring", -- Heath. Earring +2
+    body="Ignominy Cuirass +3", -- nyame mail
+    hands="Sakpata's Gauntlets",
+    ring1="Regal Ring",
+    ring2="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    waist="Sailfi Belt +1",
+    legs="Ig. Flanchard +3",
+    feet="Heath. Sollerets +3"
+	}) 
+	
+	
 	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {}) 
     sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS['Catastrophe'], {}) 
     sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {}) 
@@ -240,7 +344,21 @@ function init_gear_sets()
     sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
     sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
 	
-	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS['Catastrophe'], {ear1="Moonshade Earring"})
+	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS['Catastrophe'], {
+	ammo="Crepuscular Pebble",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck="Abyssal Beads +2",
+    waist="Fotia Belt",
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
 	sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
     sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS['Catastrophe'], {})
     sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
@@ -404,8 +522,6 @@ function init_gear_sets()
      
 	sets.Kiting = {legs="Carmine Cuisses +1"}
 	--sets.passive.Reraise = {head="Twilight Helm",body="Twilight Mail"}
-	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {head="Frenzy Sallet"}
      
 	-- Engaged sets
 	sets.engaged = {
@@ -417,7 +533,7 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
@@ -450,7 +566,7 @@ function init_gear_sets()
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
-    right_ring="Niqmaddu Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
     sets.engaged.FullAcc = {
@@ -465,7 +581,7 @@ function init_gear_sets()
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
-    right_ring="Niqmaddu Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
     sets.engaged.Fodder = {
@@ -477,7 +593,7 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Telos Earring",
     left_ring="Petrov Ring",
     right_ring="Niqmaddu Ring",
@@ -495,8 +611,8 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     ear1="Cessance Earring",
     ear2="Telos Earring",
-	left_ring="Chirich Ring +1",
-    right_ring="Niqmaddu Ring",
+	left_ring="Moonlight Ring",
+    right_ring="Moonlight Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
 	
 	sets.engaged.Subtle = {
@@ -506,10 +622,10 @@ function init_gear_sets()
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck="Bathy Choker",
+    neck="Bathy Choker +1",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
-    right_ear="Cessance Earring",
+    left_ear="Digni. Earring",
+    right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
@@ -621,201 +737,8 @@ function init_gear_sets()
 	sets.engaged.Liberator.Acc.MDT.Adoulin.AM = {}
 	sets.engaged.Liberator.FullAcc.MDT.Adoulin.AM = {}
 	sets.engaged.Liberator.Fodder.MDT.Adoulin.AM = {}
-	
--- Apocalypse melee sets
-    sets.engaged.Apocalypse = {}
-	sets.engaged.Apocalypse.SomeAcc = {}
-	sets.engaged.Apocalypse.Acc = {}
-	sets.engaged.Apocalypse.FullAcc = {}
-	sets.engaged.Apocalypse.Fodder = {}
-	
-    sets.engaged.Apocalypse.Adoulin = {}
-	sets.engaged.Apocalypse.SomeAcc.Adoulin = {}
-	sets.engaged.Apocalypse.Acc.Adoulin = {}
-	sets.engaged.Apocalypse.FullAcc.Adoulin = {}
-	sets.engaged.Apocalypse.Fodder.Adoulin = {}
-	
-    sets.engaged.Apocalypse.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.AM = {}
-	sets.engaged.Apocalypse.Acc.AM = {}
-	sets.engaged.Apocalypse.FullAcc.AM = {}
-	sets.engaged.Apocalypse.Fodder.AM = {}
-	
-    sets.engaged.Apocalypse.Adoulin.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Acc.Adoulin.AM = {}
-	sets.engaged.Apocalypse.FullAcc.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Fodder.Adoulin.AM = {}
-
-	sets.engaged.Apocalypse.PDT = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT = {}
-	sets.engaged.Apocalypse.Acc.PDT = {}
-	sets.engaged.Apocalypse.FullAcc.PDT = {}
-	sets.engaged.Apocalypse.Fodder.PDT = {}
-	
-	sets.engaged.Apocalypse.PDT.Adoulin = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Adoulin = {}
-	sets.engaged.Apocalypse.Acc.PDT.Adoulin = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Adoulin = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Adoulin = {}
-	
-	sets.engaged.Apocalypse.PDT.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.AM = {}
-	
-	sets.engaged.Apocalypse.PDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Adoulin.AM = {}
-	
-	sets.engaged.Apocalypse.PDT.Charge = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Charge = {}
-	sets.engaged.Apocalypse.Acc.PDT.Charge = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Charge = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Charge = {}
-	
-	sets.engaged.Apocalypse.PDT.Adoulin.Charge = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Adoulin.Charge = {}
-	sets.engaged.Apocalypse.Acc.PDT.Adoulin.Charge = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Adoulin.Charge = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Adoulin.Charge = {}
-	
-	sets.engaged.Apocalypse.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Charge.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Charge.AM = {}
-	
-	sets.engaged.Apocalypse.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Apocalypse.Acc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Apocalypse.FullAcc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Apocalypse.Fodder.PDT.Adoulin.Charge.AM = {}
-
-	sets.engaged.Apocalypse.MDT = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT = {}
-	sets.engaged.Apocalypse.Acc.MDT = {}
-	sets.engaged.Apocalypse.FullAcc.MDT = {}
-	sets.engaged.Apocalypse.Fodder.MDT = {}
-	
-	sets.engaged.Apocalypse.MDT.Adoulin = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT.Adoulin = {}
-	sets.engaged.Apocalypse.Acc.MDT.Adoulin = {}
-	sets.engaged.Apocalypse.FullAcc.MDT.Adoulin = {}
-	sets.engaged.Apocalypse.Fodder.MDT.Adoulin = {}
-	
-	sets.engaged.Apocalypse.MDT.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT.AM = {}
-	sets.engaged.Apocalypse.Acc.MDT.AM = {}
-	sets.engaged.Apocalypse.FullAcc.MDT.AM = {}
-	sets.engaged.Apocalypse.Fodder.MDT.AM = {}
-	
-	sets.engaged.Apocalypse.MDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.SomeAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Acc.MDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.FullAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Apocalypse.Fodder.MDT.Adoulin.AM = {}
-	
--- Ragnarok melee sets
-    sets.engaged.Ragnarok = {}
-	sets.engaged.Ragnarok.SomeAcc = {}
-	sets.engaged.Ragnarok.Acc = {}
-	sets.engaged.Ragnarok.FullAcc = {}
-	sets.engaged.Ragnarok.Fodder = {}
-	
-    sets.engaged.Ragnarok.Adoulin = {}
-	sets.engaged.Ragnarok.SomeAcc.Adoulin = {}
-	sets.engaged.Ragnarok.Acc.Adoulin = {}
-	sets.engaged.Ragnarok.FullAcc.Adoulin = {}
-	sets.engaged.Ragnarok.Fodder.Adoulin = {}
-	
-    sets.engaged.Ragnarok.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.AM = {}
-	sets.engaged.Ragnarok.Acc.AM = {}
-	sets.engaged.Ragnarok.FullAcc.AM = {}
-	sets.engaged.Ragnarok.Fodder.AM = {}
-	
-    sets.engaged.Ragnarok.Adoulin.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Acc.Adoulin.AM = {}
-	sets.engaged.Ragnarok.FullAcc.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Fodder.Adoulin.AM = {}
-
-	sets.engaged.Ragnarok.PDT = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT = {}
-	sets.engaged.Ragnarok.Acc.PDT = {}
-	sets.engaged.Ragnarok.FullAcc.PDT = {}
-	sets.engaged.Ragnarok.Fodder.PDT = {}
-	
-	sets.engaged.Ragnarok.PDT.Adoulin = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Adoulin = {}
-	sets.engaged.Ragnarok.Acc.PDT.Adoulin = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Adoulin = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Adoulin = {}
-	
-	sets.engaged.Ragnarok.PDT.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.AM = {}
-	sets.engaged.Ragnarok.Acc.PDT.AM = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.AM = {}
-	sets.engaged.Ragnarok.Fodder.PDT.AM = {}
-	
-	sets.engaged.Ragnarok.PDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Acc.PDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Adoulin.AM = {}
-	
-	sets.engaged.Ragnarok.PDT.Charge = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Charge = {}
-	sets.engaged.Ragnarok.Acc.PDT.Charge = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Charge = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Charge = {}
-	
-	sets.engaged.Ragnarok.PDT.Adoulin.Charge = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Adoulin.Charge = {}
-	sets.engaged.Ragnarok.Acc.PDT.Adoulin.Charge = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Adoulin.Charge = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Adoulin.Charge = {}
-	
-	sets.engaged.Ragnarok.PDT.Charge.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Charge.AM = {}
-	sets.engaged.Ragnarok.Acc.PDT.Charge.AM = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Charge.AM = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Charge.AM = {}
-	
-	sets.engaged.Ragnarok.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Ragnarok.Acc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Ragnarok.FullAcc.PDT.Adoulin.Charge.AM = {}
-	sets.engaged.Ragnarok.Fodder.PDT.Adoulin.Charge.AM = {}
-
-	sets.engaged.Ragnarok.MDT = {}
-	sets.engaged.Ragnarok.SomeAcc.MDT = {}
-	sets.engaged.Ragnarok.Acc.MDT = {}
-	sets.engaged.Ragnarok.FullAcc.MDT = {}
-	sets.engaged.Ragnarok.Fodder.MDT = {}
-	
-	sets.engaged.Ragnarok.MDT.Adoulin = {}
-	sets.engaged.Ragnarok.SomeAcc.MDT.Adoulin = {}
-	sets.engaged.Ragnarok.Acc.MDT.Adoulin = {}
-	sets.engaged.Ragnarok.FullAcc.MDT.Adoulin = {}
-	sets.engaged.Ragnarok.Fodder.MDT.Adoulin = {}
-	
-	sets.engaged.Ragnarok.MDT.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.MDT.AM = {}
-	sets.engaged.Ragnarok.Acc.MDT.AM = {}
-	sets.engaged.Ragnarok.FullAcc.MDT.AM = {}
-	sets.engaged.Ragnarok.Fodder.MDT.AM = {}
-	
-	sets.engaged.Ragnarok.MDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.SomeAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Acc.MDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.FullAcc.MDT.Adoulin.AM = {}
-	sets.engaged.Ragnarok.Fodder.MDT.Adoulin.AM = {}
 ]]--
+
 	--Extra Special Sets
 	
 	sets.buff.Souleater = {}
@@ -823,14 +746,15 @@ function init_gear_sets()
 	sets.buff.Sleep = {head="Frenzy Sallet"}
 	sets.latent_refresh = {waist="Fucho-no-Obi"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
+	sets.buff['Dark Seal'] = {head="Fallen's Burgeonet +3"}
 	
 	-- Weapons sets
 	sets.weapons.Caladbolg = {main="Caladbolg",sub="Utu Grip"}
-	--sets.weapons.Trial = {main="Sword of Trials",sub="Utu Grip"}
 	sets.weapons.Anguta = {main="Anguta",sub="Utu Grip"}
 	sets.weapons.Apocalypse = {main="Apocalypse",sub="Utu Grip"}
 	sets.weapons.Loxotic = {main="Loxotic Mace +1",sub="Blurred Shield +1"}
 	sets.weapons.Naegling = {main="Naegling",sub="Blurred Shield +1"}
+	sets.weapons.Foenaria = {main="Foenaria",sub="Utu Grip"}
 	
 	
 	
@@ -858,102 +782,3 @@ send_command('wait 10;input /lockstyleset 1')
 end
 
 send_command('wait 10;input /lockstyleset 1')
-
-
--- function user_self_command(commandArgs, eventArgs)
-	-- if commandArgs[1] == 'rad' then
-	   -- send_command('input /echo waiting; wait 4.5; input //temps buy radialens')
-       -- add_to_chat(158,'Radialens')
-	-- elseif commandArgs[1] == 'attackbt' then
-		-- send_command('input /attack <bt>')
-		-- add_to_chat(158,'Attack bt')
-	-- elseif commandArgs[1] == 'bli' then
-       -- send_command('input /ma "Blind" <bt>')
-	   -- add_to_chat(158,'Blinding')
-	-- elseif commandArgs[1] == 'ewz' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew z')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew1' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 1')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew2' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 2')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew3' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 3')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew4' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 4')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew5' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 5')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew6' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 6')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew7' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 7')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew8' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 8')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew9' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 9')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew10' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 10')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew11' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 11')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew12' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 12')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew13' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 13')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew14' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 14')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew15' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 15')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'stop' then
-        -- windower.ffxi.run(false)
-        -- windower.ffxi.follow()
-		-- add_to_chat(158,'Chillin')
-	-- elseif commandArgs[1] == 'food' then
-       -- send_command('input /item "Sublime Sushi +1" <me>')
-       -- add_to_chat(158,'Eating')
-	-- elseif commandArgs[1] == 'charm' then
-       -- send_command('input /item "Charm Buffer" <me>')
-       -- add_to_chat(158,'Charm buffer')
-	-- elseif commandArgs[1] == 'wing1' then
-       -- send_command('input /item "Lucid Wings I" <me>')
-       -- add_to_chat(158,'Lucid Wings I')
-	-- elseif commandArgs[1] == 'wing2' then
-       -- send_command('input /item "Lucid Wings II" <me>')
-       -- add_to_chat(158,'Lucid Wings II')
-	-- elseif commandArgs[1] == 'wing3' then
-       -- send_command('input /item "Daedalus wing" <me>')
-       -- add_to_chat(158,'Daedalus wing')
-	-- elseif commandArgs[1] == 'super' then
-       -- send_command('input /item "Super Revitalizer" <me>')
-       -- add_to_chat(158,'Super Revitalizer')
-	-- elseif commandArgs[1] == 'pois' then
-       -- send_command('input /item "Poison Buffer" <me>')
-       -- add_to_chat(158,'Poison Buffer')
-	-- elseif commandArgs[1] == 'doom' then
-       -- send_command('input /item "Savior\'s Tonic" <me>')
-       -- add_to_chat(158,'Savior tonic')
-	-- elseif commandArgs[1] == 'amne' then
-       -- send_command('input /item "Moneta\'s Tonic"  <me>')
-       -- add_to_chat(158,'Monetas Tonic')
-	-- elseif commandArgs[1] == 'petri' then
-       -- send_command('input /item "Mirror\'s Tonic" <me>')
-       -- add_to_chat(158,'Mirrors Tonic')
-	-- elseif commandArgs[1] == 'pote' then
-       -- send_command('input /item "Champion\'s Drink" <me>')
-       -- add_to_chat(158,'Champions Drink')
-	-- end
--- end

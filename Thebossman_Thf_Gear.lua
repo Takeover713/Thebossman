@@ -32,10 +32,10 @@ function user_setup()
 	send_command('bind ^\\\\ input /ja "Despoil" <t>')
 	send_command('bind !\\\\ input /ja "Mug" <t>')
 	-- send_command('bind !d send @all gs c buff')
-	send_command('bind !q send @brd //hordelullaby2 <t>')
+	--send_command('bind !q send @brd //hordelullaby2 <t>')
 	--send_command('bind !a sat alltarget')
 	-- send_command('bind ^d send rafleshia gs c oboss')
-	send_command('bind !s send @whm sacrosanctity')
+	--send_command('bind !s send @whm sacrosanctity')
 	-- send_command('bind !f send @others gs c attackbt')
 	-- send_command('bind !t send @run gs c toggle Autotankmode')
 	
@@ -394,10 +394,9 @@ function select_default_macro_book()
 end
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 17')
+send_command('wait 10;input /lockstyleset 17')
 end
 
-send_command('wait 2;input /lockstyleset 17')
 
 -- function user_self_command(commandArgs, eventArgs)
 	-- if commandArgs[1] == 'rad' then

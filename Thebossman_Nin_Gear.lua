@@ -38,17 +38,17 @@ function user_setup()
 	--send_command('bind @h send @brd hb on')
 	--send_command('bind !f send @others gs c attackbt')
 	--send_command('bind ^q send @run gs c toggle Autotankmode')
-	send_command('bind !z send @cor //leadensalute <t>')
+	-- send_command('bind !z send @cor //leadensalute <t>')
 	--send_command('bind !v send @geo //fullcircle')
-	send_command('bind !x send @smn //thunderspark <t>')
-	send_command('bind ![ send @geo //fira3 <t>')
-	send_command('bind !] send @geo //Thundara3 <t>')
-	send_command('bind @x send @smn //voltstrike <t>')
-	send_command('bind ^x send @smn //apogee')
+	-- send_command('bind !x send @smn //thunderspark <t>')
+	-- send_command('bind ![ send @geo //fira3 <t>')
+	-- send_command('bind !] send @geo //Thundara3 <t>')
+	-- send_command('bind @x send @smn //voltstrike <t>')
+	-- send_command('bind ^x send @smn //apogee')
 	--send_command('bind !t send @run gs c toggle Autotankmode')
-	send_command('bind !/ send @run //vivaciouspulse')
-	send_command('bind !b gs c buffup')
-	send_command('bind !pause gs c toggle AutoBuffMode')
+	-- send_command('bind !/ send @run //vivaciouspulse')
+	-- send_command('bind !b gs c buffup')
+	-- send_command('bind !pause gs c toggle AutoBuffMode')
 
 	--.4
 	--.1
@@ -652,10 +652,10 @@ end
 
 
 function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 1')
+send_command('wait 10;input /lockstyleset 1')
 end
 
-send_command('wait 2;input /lockstyleset 1')
+send_command('wait 10;input /lockstyleset 1')
 
 -- function user_self_command(commandArgs, eventArgs)
 	-- if commandArgs[1] == 'rad' then
