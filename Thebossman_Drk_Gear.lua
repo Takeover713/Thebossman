@@ -54,9 +54,9 @@ function init_gear_sets()
 	sets.precast.JA['Diabolic Eye'] = {hands="Fallen's Finger Gauntlets +3"}
 	sets.precast.JA['Arcane Circle'] = {feet="Ig. Sollerets +1"}
 	sets.precast.JA['Souleater'] = {head="Ig. Burgeonet +3"}
-	sets.precast.JA['Weapon Bash'] = {hands="Igno. Gauntlets +3"}
-	sets.precast.JA['Nether Void'] = {legs="Heathen's Flanchard +3"}
-	sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +1"}
+	sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +3"}
+	sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +3"}
+	sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +3"}
 	sets.precast.JA['Dark Seal'] = {head="Fallen's Burgeonet +3"}
 	sets.precast.JA['Last Resort'] = {back="Ankou's Mantle"}
                    
@@ -101,7 +101,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'] = {
 		ammo="Pemphredo Tathlum",
 		head={ name="Nyame Helm", augments={'Path: B',}},
-		body={ name="Fall. Cuirass +1", augments={'Enhances "Blood Weapon" effect',}},
+		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
 		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Heath. Sollerets +3",
@@ -126,7 +126,7 @@ function init_gear_sets()
          ring1="Evanescence Ring", -- 10
          ring2="Stikini Ring +1",
 		 back="Niht Mantle",
-         legs="Heath. Flachard +3",  -- 20
+         legs="Heath. Flanchard +3",  -- 20 legs="Heath. Flanchard +3",
          feet="Ratri Sollerets +1"}
            
 	sets.midcast['Enfeebling Magic'] = {
@@ -171,7 +171,7 @@ function init_gear_sets()
 	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {
 		ammo="Pemphredo Tathlum",
 		head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
-		body="Fall. Cuirass +1", -- upgrade to +3
+		body="Fall. Cuirass +3",
 		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Rat. Sollerets +1",
@@ -194,7 +194,7 @@ function init_gear_sets()
 		 hands="Fall. Fin. Gaunt. +3",
 		 ammo="Pemphredo Tathlum",
 		 back={ name="Niht Mantle", augments={'Attack+15','Dark magic skill +10','"Drain" and "Aspir" potency +24',}},
-		 legs="Heath. Flachard +3",
+		 legs="Heath. Flanchard +3",
 		 waist="Austerity Belt +1",
 		 feet="Ratri Sollerets +1"})
                    
@@ -214,7 +214,6 @@ function init_gear_sets()
 	waist="Oneiros Rope",
 	feet="Heath. Sollerets +3",
 	back={ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
-	-- replace fast cast with magic acc +10, STP +10, PDT -10%
 	})
 	
 	
@@ -250,13 +249,28 @@ function init_gear_sets()
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
-	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {neck="Combatant's Torque"})
+	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {
+	ammo="Knobkierrie",
+    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+    body="Ignominy Cuirass +3",
+    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +5%','STR+7','Accuracy+14','Attack+11',}},
+    legs="Fallen's Flanchard +3",
+    feet="Heathen's sollerets +3",
+    neck="Abyssal Beads +2",
+    waist="Fotia Belt",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring",
+    ring1="Regal Ring",
+    ring2="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 	
 	
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+   -- head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
     body="Ignominy Cuirass +3",
     hands="Rat. Gadlings +1",
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
@@ -272,13 +286,10 @@ function init_gear_sets()
 	
     sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
-	
-		
-	sets.precast.WS['Origin'] = set_combine(sets.precast.WS, {
+    sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
     body="Ignominy Cuirass +3",
     hands="Rat. Gadlings +1",
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
@@ -287,14 +298,48 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Moonshade Earring",
     right_ear="Thrud Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Sroda Ring",
+    right_ring="Epaminondas's Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
+    sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+		
+	sets.precast.WS['Origin'] = set_combine(sets.precast.WS, {
+	ammo="Knobkierrie",
+    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
+    body="Ignominy Cuirass +3",
+    hands="Rat. Gadlings +1",
+    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
     right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 		})
 	
     sets.precast.WS['Origin'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Origin'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Origin'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Origin'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Knobkierrie",
+    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
+    body="Ignominy Cuirass +3",
+    hands="Rat. Gadlings +1",
+    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Regal Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
     sets.precast.WS['Origin'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
 	
@@ -308,43 +353,96 @@ function init_gear_sets()
 	feet="Ratri Sollerets +1",
 	ring1="Epaminondas's Ring",
 	ear1="Lugra earring +1",
-	ear2="Thrud Earring"})
+	ear2="Thrud Earring"
+	})
 	
     sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	head="Ratri Sallet +1",
+	hands="Ratri Gadlings +1",
+	feet="Ratri Sollerets +1",
+	ring1="Epaminondas's Ring",
+	ear1="Lugra earring +1",
+	ear2="Thrud Earring"
+	})
     sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+		
 	
-	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS['Catastrophe'], {
+	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-   -- head="Heath. Burgeon. +2",
-	head="Hjarrandi Helm",
+    head="Heath. Bur. +3",
+	--head="Hjarrandi Helm",
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring", -- Heath. Earring +2
     body="Ignominy Cuirass +3", -- nyame mail
     hands="Sakpata's Gauntlets",
-    ring1="Regal Ring",
+    ring1="Sroda Ring",
     ring2="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
     legs="Ig. Flanchard +3",
     feet="Heath. Sollerets +3"
-	}) 
+	})
+    sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Knobkierrie",
+    head="Heath. Bur. +3",
+	--head="Hjarrandi Helm",
+    neck="Abyssal Beads +2",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring", -- Heath. Earring +2
+    body="Ignominy Cuirass +3", -- nyame mail
+    hands="Sakpata's Gauntlets",
+    ring1="Sroda Ring",
+    ring2="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    waist="Sailfi Belt +1",
+    legs="Ig. Flanchard +3", -- sakpata legs for damage limit
+    feet="Heath. Sollerets +3"
+	})
+    sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
 	
-	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {}) 
-    sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS['Catastrophe'], {}) 
-    sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {}) 
-    sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
+	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
+	ammo="Knobkierrie",
+    head="Heath. Bur. +3",
+	--head="Hjarrandi Helm",
+    neck="Abyssal Beads +2",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring", -- Heath. Earring +2
+    body="Ignominy Cuirass +3", -- nyame mail
+    hands="Sakpata's Gauntlets",
+    ring1="Sroda Ring",
+    ring2="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    waist="Sailfi Belt +1",
+    legs="Ig. Flanchard +3", -- nyame Flachard
+    feet="Heath. Sollerets +3"
+	})
+    sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Knobkierrie",
+    head="Heath. Bur. +3",
+	--head="Hjarrandi Helm",
+    neck="Abyssal Beads +2",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring", -- Heath. Earring +2
+    body="Ignominy Cuirass +3", -- nyame mail
+    hands="Sakpata's Gauntlets",
+    ring1="Sroda Ring",
+    ring2="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    waist="Sailfi Belt +1",
+    legs="Ig. Flanchard +3", -- nyame Flachard
+    feet="Heath. Sollerets +3"
+	})
+    sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS['Catastrophe'], {ear1="Moonshade Earring"})
-	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
-	
-	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS['Catastrophe'], {
+	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS, {
 	ammo="Crepuscular Pebble",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Sakpata's Plate",
@@ -359,20 +457,70 @@ function init_gear_sets()
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
-	sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Quietus'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
+    sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Crepuscular Pebble",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck="Abyssal Beads +2",
+    waist="Fotia Belt",
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
+    sets.precast.WS['Quietus'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
-	sets.precast.WS['Spiral Hell'] = set_combine(sets.precast.WS['Catastrophe'], {})
-	sets.precast.WS['Spiral Hell'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Spiral Hell'].Acc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Spiral Hell'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Spiral Hell'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
+	
+	sets.precast.WS['Spiral Hell'] = set_combine(sets.precast.WS, {})
+    sets.precast.WS['Spiral Hell'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Spiral Hell'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Spiral Hell'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Spiral Hell'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+	sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {
+	ammo="Crepuscular Pebble",
+    head="Heath. Bur. +3",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Ig. Flanchard +3", -- sakpata legs 
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
+    sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+    sets.precast.WS['Entropy'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Crepuscular Pebble",
+    head="Heath. Bur. +3",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Ig. Flanchard +3", -- sakpata legs 
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
+    sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
     sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
     ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
     body="Ignominy Cuirass +3",
     hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +5%','STR+7','Accuracy+14','Attack+11',}},
     legs="Fallen's Flanchard +3",
@@ -381,39 +529,63 @@ function init_gear_sets()
     waist="Sailfi belt +1",
     ear1="Moonshade Earring",
     ear2="Thrud Earring",
-    ring1="Epaminondas's Ring",
+    ring1="Sroda Ring",
     ring2="Regal Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 })
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Knobkierrie",
+    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
+	head="Heath. Bur. +3",
+    body="Ignominy Cuirass +3",
+    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +5%','STR+7','Accuracy+14','Attack+11',}},
+    legs="Fallen's Flanchard +3",
+    feet="Heathen's sollerets +3",
+    neck="Abyssal Beads +2",
+    waist="Sailfi belt +1",
+    ear1="Moonshade Earring",
+    ear2="Thrud Earring",
+    ring1="Sroda Ring",
+    ring2="Regal Ring",
+    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
+	})
     sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-    sets.precast.WS['Entropy'] = set_combine(sets.precast.WS['Catastrophe'], {ear2="Moonshade Earring"})
-    sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Entropy'].Acc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS['Catastrophe'], {})
-    sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS['Catastrophe'], {})
      
     sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
-    ammo="Seeth. Bomblet +1",
-    head={ name="Argosy Celata +1", augments={'STR+12','DEX+12','Attack+20',}},
-    body="Dagon Breastplate",
-    hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
-    legs="Ig. Flanchard +3",
-    feet={ name="Argosy Sollerets +1", augments={'STR+12','DEX+12','Attack+20',}},
+    ammo="Crepuscular Pebble",
+    head="Heath. Bur. +3",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
-    right_ear="Telos Earring",
+    right_ear="Thrud Earring",
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
-    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 })
     sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+    sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	ammo="Crepuscular Pebble",
+    head="Heath. Bur. +3",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck="Abyssal Beads +2",
+    waist="Fotia Belt",
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
     sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})     
            
      -- Sets to return to when not performing an action.

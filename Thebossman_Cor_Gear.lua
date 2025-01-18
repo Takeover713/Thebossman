@@ -23,6 +23,8 @@ function user_setup()
 	-- gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
 	-- gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 	
+	
+	autows_list = {['LeadenMelee']='Leaden Salute',['LeadenMelee2']='Leaden Salute',['SavageWeapons']='Savage Blade',['LastStand']='Last Stand',['SavageWeapon']='Savage Blade',['AeolianWeapons']='Aeolian Edge'}
 	autowstp = 1250
 	autofood = 'Sublime sushi +1'
 
@@ -45,14 +47,6 @@ function user_setup()
 	--send_command('bind @q gs c weapons MaccWeapons;gs c update')
 	--send_command('bind ^q gs c weapons DualRangedWeapons;gs c update')
 	--send_command('bind !q gs c weapons SavageWeapons;gs c update')
-	-- send_command('bind !x send @smn //thunderspark <t>')
-	-- send_command('bind ![ send @geo //fira3 <t>')
-	-- send_command('bind !] send @geo //Thundara3 <t>')
-	-- send_command('bind @x send @smn //voltstrike <t>')
-	-- send_command('bind ^x send @smn //apogee')
-	--send_command('bind !t send @run gs c toggle Autotankmode')
-	--send_command('bind !/ send @run //vivaciouspulse')
-	--send_command('bind !c send @geo //c1 thebo')
 
     select_default_macro_book()
 end
@@ -671,12 +665,8 @@ function select_default_macro_book()
 end
 
 
-autows_list = {['LeadenMelee']='Leaden Salute',['LeadenMelee2']='Leaden Salute',['SavageWeapons']='Savage Blade',['LastStand']='Last Stand',['SavageWeapon']='Savage Blade',['AeolianWeapons']='Aeolian Edge'}
-
-
-
 function sub_job_change(new,old)
-send_command('wait 10;input /lockstyleset 17')
+send_command('wait 8;input /lockstyleset 1')
 end
 
-
+send_command('wait 8;input /lockstyleset 1')
