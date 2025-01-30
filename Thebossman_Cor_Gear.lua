@@ -7,7 +7,7 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
-	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon')
+	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon','Absorb')
 	state.CompensatorMode:options('Always','300','Never','1000')
 
     gear.RAbullet = "Chrono Bullet" -- Chrono Bullet
@@ -436,8 +436,25 @@ function init_gear_sets()
         head="Carmine Mask +1",neck="Baetyl Pendant",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
         body="Dread Jupon",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
         back="Moonlight Cape",waist="Flume Belt",legs="Rawhide Trousers",feet="Carmine Greaves +1"}
+		
         
     -- Specific spells
+
+sets.midcast['Absorb-TP'] = {
+    ammo="Pemphredo Tathlum",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body="Chasseur's Frac +3",
+    hands="Chasseur's Gants +3",
+    legs="Chas. Culottes +3",
+    feet="Chass. Bottes +3",
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
+    waist="Kwahu Kachina Belt",
+    left_ear="Digni. Earring",
+    right_ear={ name="Chas. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
+    left_ring="Stikini Ring +1",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+}
 
 	--sets.midcast.Cure = {head="Carmine Mask +1",neck="Phalaina Locket",ear1="Enchntr. Earring +1",ear2="Mendi. Earring",
 		--body="Dread Jupon",hands="Leyline Gloves",ring1="Janniston Ring",ring2="Lebeche Ring",
@@ -539,6 +556,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.SavageWeapons = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
 	sets.weapons.SavageWeapon = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
+	sets.weapons.Absorb = {main="Naegling",sub="Nusku Shield",range=empty}
 	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
 	sets.weapons.LeadenMelee = {main="Naegling",sub='Tauret',range="Death Penalty"}
 	sets.weapons.LeadenMelee2 = {main={ name="Rostam", augments={'Path: B',}},sub='Tauret',range="Death Penalty"}
