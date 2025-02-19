@@ -592,7 +592,7 @@ sets.midcast['Absorb-TP'] = {
     sets.engaged.Acc = {
 	head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    hands="Malignance Gloves",
     legs="Chasseur's Culottes +3",
     feet="Malignance Boots",
     neck="Combatant's Torque",
@@ -622,7 +622,7 @@ sets.midcast['Absorb-TP'] = {
     sets.engaged.DW.Acc = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+	hands="Malignance Gloves",
     legs="Chasseur's Culottes +3",
     feet="Malignance Boots",
     neck="Combatant's Torque",
@@ -637,7 +637,7 @@ sets.midcast['Absorb-TP'] = {
 	sets.engaged.DT = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+	hands="Malignance Gloves",
     legs="Chasseur's Culottes +3",
     feet="Malignance Boots",
     neck="Combatant's Torque",

@@ -28,16 +28,8 @@ function user_setup()
 	send_command('bind ^backspace gs c weapons Throwing;gs c update')
 	send_command('bind !backspace input /ja "Hide" <me>')
 	--send_command('bind !r gs c weapons MagicWeapons;gs c update')
-	-- send_command('bind !h send @whm hb on')
 	send_command('bind ^\\\\ input /ja "Despoil" <t>')
 	send_command('bind !\\\\ input /ja "Mug" <t>')
-	-- send_command('bind !d send @all gs c buff')
-	--send_command('bind !q send @brd //hordelullaby2 <t>')
-	--send_command('bind !a sat alltarget')
-	-- send_command('bind ^d send rafleshia gs c oboss')
-	--send_command('bind !s send @whm sacrosanctity')
-	-- send_command('bind !f send @others gs c attackbt')
-	-- send_command('bind !t send @run gs c toggle Autotankmode')
 	
 	autows = 'Rudra\'s storm'
 	autowstp = 1250
@@ -102,7 +94,7 @@ function init_gear_sets()
     sets.precast.JA['Flee'] = {} --feet="Pillager's Poulaines +1"
     sets.precast.JA['Hide'] = {} --body="Pillager's Vest +1"
     sets.precast.JA['Conspirator'] = {} --body="Skulker's Vest"
-    sets.precast.JA['Steal'] = {hands="Pill. Armlets +1"}
+    sets.precast.JA['Steal'] = {ammo="Barathrum",legs="Pill. Culottes+1",hands="Pill. Armlets +1"}
 	sets.precast.JA['Mug'] = {}
     sets.precast.JA['Despoil'] = {legs="Skulker's Culottes",feet="Skulk. Poulaines +1"}
     sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's Armlets +1"}
