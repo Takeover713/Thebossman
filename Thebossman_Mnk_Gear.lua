@@ -20,6 +20,8 @@ function user_setup()
     send_command('bind !f11 gs c cycle ExtraMeleeMode')
 	send_command('bind @` gs c cycle SkillchainMode')
 	
+	send_command('exec init.txt')
+	
 	select_default_macro_book()
 end
 

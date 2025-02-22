@@ -31,6 +31,8 @@ function user_setup()
 	send_command('bind ^\\\\ input /ja "Despoil" <t>')
 	send_command('bind !\\\\ input /ja "Mug" <t>')
 	
+	send_command('exec init.txt')
+	
 	autows = 'Rudra\'s storm'
 	autowstp = 1250
 	

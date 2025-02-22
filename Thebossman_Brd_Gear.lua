@@ -28,6 +28,8 @@ function user_setup()
 	--send_command('bind !s send @whm sacrosanctity')
 	--send_command('bind !f send @geo fullcircle ')
 	
+	send_command('exec init.txt')
+	
 	autows = 'Savage Blade'
 	autowstp = 1250
 
@@ -811,7 +813,7 @@ function select_default_macro_book()
 end
 
 function sub_job_change(new,old)
-send_command('wait 10;input /lockstyleset 1')
+send_command('wait 5;input /lockstyleset 1')
 end
 
-send_command('wait 10;input /lockstyleset 1')
+send_command('wait 5;input /lockstyleset 1')

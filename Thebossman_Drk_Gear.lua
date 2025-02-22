@@ -17,6 +17,8 @@ function user_setup()
 	
 	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Entropy',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
 	
+	send_command('exec init.txt')
+	
 	-- autows = 'Torcleaver'
 	autowstp = 1500
 	

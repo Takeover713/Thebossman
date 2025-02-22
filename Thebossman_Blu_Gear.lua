@@ -40,6 +40,8 @@ function user_setup()
 	send_command('bind !q gs c weapons HybridWeapons;gs c update')
 	--send_command('bind !h send @whm hb on')
 	
+	send_command('exec init.txt')
+	
 	autows = 'Savage Blade'
 	autowstp = 1250
 	

@@ -35,15 +35,8 @@ function user_setup()
 	send_command('bind @f10 gs c toggle TankAutoDefense')
 	send_command('bind ^@!` gs c cycle SkillchainMode')
 	send_command('bind !pause gs c toggle AutoBuffMode')
-	--send_command('bind !t gs c toggle AutoTankMode')
-	--send_command('bind !d send @all gs c buff')
-	--send_command('bind !q send @brd //hordelullaby2 <tid>')
-	--send_command('bind !a sat alltarget')
-	--send_command('bind ^d send rafleshia gs c oboss')
-	--send_command('bind !s send @whm sacrosanctity')
-	--send_command('bind !h send @whm hb on')
-	--send_command('bind !f send @others gs c attackbt')
-	--send_command('bind !r gs c weapons Lionheart;gs c update')
+	send_command('exec init.txt')
+
 	
 	select_default_macro_book()
 end
@@ -577,142 +570,10 @@ function select_default_macro_book()
 	end
 end
 
---Job Specific Trust Overwrite
-function check_trust()
-	if not moving then
-		if state.AutoTrustMode.value and not areas.Cities:contains(world.area) and (buffactive['Elvorseal'] or buffactive['Reive Mark'] or not player.in_combat) then
-			local party = windower.ffxi.get_party()
-			if party.p5 == nil then
-				local spell_recasts = windower.ffxi.get_spell_recasts()
-			
-				if spell_recasts[980] < spell_latency and not have_trust("Yoran-Oran") then
-					windower.send_command('input /ma "Yoran-Oran (UC)" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[952] < spell_latency and not have_trust("Koru-Moru") then
-					windower.send_command('input /ma "Koru-Moru" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[979] < spell_latency and not have_trust("Selh'teus") then
-					windower.send_command('input /ma "Selh\'teus" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[1013] < spell_latency and not have_trust("Lilisette") then
-					windower.send_command('input /ma "Lilisette II" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				elseif spell_recasts[914] < spell_latency and not have_trust("Ulmia") then
-					windower.send_command('input /ma "Ulmia" <me>')
-					tickdelay = (framerate * 3)
-					return true
-				else
-					return false
-				end
-			end
-		end
-	end
-	return false
-end
-
 function user_job_target_change(target)
     if target and S{"Quetzalcoatl","Naga Raja","Azi Dahaka"}:contains(target.name) then
         state.AutoRuneMode:set('true')
     end
 
     return false
-end
-
-function user_self_command(commandArgs, eventArgs)
-	if commandArgs[1] == 'buff' then
-	   send_command('input /ma "Crusade" <me>; wait 5; input /ma "Temper" <me>; wait 5; input /ma "Phalanx" <me>; wait 5; input /ma "Cocoon" <me>')
-       add_to_chat(158,'Buffing')
-	elseif commandArgs[1] == 'rad' then
-	   send_command('input /echo waiting; wait 4.5; input //temps buy radialens')
-       add_to_chat(158,'Radialens')
-	elseif commandArgs[1] == 'ewz' then
-	   send_command('input /echo waiting; wait 4.5; input //ew z')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew1' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 1')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew2' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 2')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew3' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 3')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew4' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 4')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew5' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 5')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew6' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 6')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew7' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 7')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew8' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 8')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew9' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 9')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew10' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 10')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew11' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 11')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew12' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 12')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew13' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 13')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew14' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 14')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'ew15' then
-	   send_command('input /echo waiting; wait 4.5; input //ew 15')
-       add_to_chat(158,'Zoning')
-	elseif commandArgs[1] == 'stop' then
-        windower.ffxi.run(false)
-        windower.ffxi.follow()
-		add_to_chat(158,'Chillin')
-	elseif commandArgs[1] == 'food' then
-       send_command('input /item "Miso Ramen +1" <me>')
-       add_to_chat(158,'Eating')
-	elseif commandArgs[1] == 'charm' then
-       send_command('input /item "Charm Buffer" <me>')
-       add_to_chat(158,'Charm buffer')
-	elseif commandArgs[1] == 'wing1' then
-       send_command('input /item "Lucid Wings I" <me>')
-       add_to_chat(158,'Lucid Wings I')
-	elseif commandArgs[1] == 'wing2' then
-       send_command('input /item "Lucid Wings II" <me>')
-       add_to_chat(158,'Lucid Wings II')
-	elseif commandArgs[1] == 'wing3' then
-       send_command('input /item "Daedalus wing" <me>')
-       add_to_chat(158,'Daedalus wing')
-	elseif commandArgs[1] == 'super' then
-       send_command('input /item "Super Revitalizer" <me>')
-       add_to_chat(158,'Super Revitalizer')
-	elseif commandArgs[1] == 'pois' then
-       send_command('input /item "Poison Buffer" <me>')
-       add_to_chat(158,'Poison Buffer')
-	elseif commandArgs[1] == 'doom' then
-       send_command('input /item "Savior\'s Tonic" <me>')
-       add_to_chat(158,'Savior tonic')
-	elseif commandArgs[1] == 'amne' then
-       send_command('input /item "Moneta\'s Tonic"  <me>')
-       add_to_chat(158,'Monetas Tonic')
-	elseif commandArgs[1] == 'petri' then
-       send_command('input /item "Mirror\'s Tonic" <me>')
-       add_to_chat(158,'Mirrors Tonic')
-	elseif commandArgs[1] == 'pote' then
-       send_command('input /item "Champion\'s Drink" <me>')
-       add_to_chat(158,'Champions Drink')
-	end
 end

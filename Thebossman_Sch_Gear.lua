@@ -33,6 +33,8 @@ function user_setup()
 	send_command('bind @\\\\ input /ma "Shell V" <t>')
 	send_command('bind !\\\\ input /ma "Reraise III" <me>')
 	
+	send_command('exec init.txt')
+	
     select_default_macro_book()
 end
 

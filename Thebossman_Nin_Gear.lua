@@ -21,34 +21,13 @@ function user_setup()
 	
 	autofood = 'Sublime sushi +1'
 	
-	--send_command('bind !pageup ffo me')
-	--send_command('bind !pagedown ffo stopall')
 	send_command('bind ^` input /ja "Innin" <me>')
     send_command('bind !` input /ja "Yonin" <me>')
 	send_command('bind @` gs c cycle SkillchainMode')
 	send_command('bind !f11 gs c cycle ExtraMeleeMode')
 	send_command('bind !@^` gs c cycle Stance')
-	--send_command('bind !d send @all gs c buff')
-	--send_command('bind !q send @brd //hordelullaby2 <t>')
-	--send_command('bind !a sat alltarget')
-	--send_command('bind ^d send rafleshia gs c oboss')
-	--send_command('bind !s send @whm sacrosanctity')
-	--send_command('bind !h send @whm hb on')
-	--send_command('bind ^h send @geo hb on')
-	--send_command('bind @h send @brd hb on')
-	--send_command('bind !f send @others gs c attackbt')
-	--send_command('bind ^q send @run gs c toggle Autotankmode')
-	-- send_command('bind !z send @cor //leadensalute <t>')
-	--send_command('bind !v send @geo //fullcircle')
-	-- send_command('bind !x send @smn //thunderspark <t>')
-	-- send_command('bind ![ send @geo //fira3 <t>')
-	-- send_command('bind !] send @geo //Thundara3 <t>')
-	-- send_command('bind @x send @smn //voltstrike <t>')
-	-- send_command('bind ^x send @smn //apogee')
-	--send_command('bind !t send @run gs c toggle Autotankmode')
-	-- send_command('bind !/ send @run //vivaciouspulse')
-	-- send_command('bind !b gs c buffup')
-	-- send_command('bind !pause gs c toggle AutoBuffMode')
+
+	send_command('exec init.txt')
 
 	--.4
 	--.1
@@ -652,99 +631,7 @@ end
 
 
 function sub_job_change(new,old)
-send_command('wait 10;input /lockstyleset 1')
+send_command('wait 7;input /lockstyleset 1')
 end
 
-send_command('wait 10;input /lockstyleset 1')
-
--- function user_self_command(commandArgs, eventArgs)
-	-- if commandArgs[1] == 'rad' then
-	   -- send_command('input /echo waiting; wait 4.5; input //temps buy radialens')
-       -- add_to_chat(158,'Radialens')
-	-- elseif commandArgs[1] == 'ewz' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew z')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew1' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 1')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew2' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 2')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew3' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 3')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew4' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 4')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew5' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 5')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew6' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 6')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew7' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 7')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew8' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 8')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew9' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 9')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew10' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 10')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew11' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 11')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew12' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 12')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew13' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 13')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew14' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 14')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'ew15' then
-	   -- send_command('input /echo waiting; wait 4.5; input //ew 15')
-       -- add_to_chat(158,'Zoning')
-	-- elseif commandArgs[1] == 'stop' then
-        -- windower.ffxi.run(false)
-        -- windower.ffxi.follow()
-		-- add_to_chat(158,'Chillin')
-	-- elseif commandArgs[1] == 'food' then
-       -- send_command('input /item "Sublime Sushi +1" <me>')
-       -- add_to_chat(158,'Eating')
-	-- elseif commandArgs[1] == 'charm' then
-       -- send_command('input /item "Charm Buffer" <me>')
-       -- add_to_chat(158,'Charm buffer')
-	-- elseif commandArgs[1] == 'wing1' then
-       -- send_command('input /item "Lucid Wings I" <me>')
-       -- add_to_chat(158,'Lucid Wings I')
-	-- elseif commandArgs[1] == 'wing2' then
-       -- send_command('input /item "Lucid Wings II" <me>')
-       -- add_to_chat(158,'Lucid Wings II')
-	-- elseif commandArgs[1] == 'wing3' then
-       -- send_command('input /item "Daedalus wing" <me>')
-       -- add_to_chat(158,'Daedalus wing')
-	-- elseif commandArgs[1] == 'super' then
-       -- send_command('input /item "Super Revitalizer" <me>')
-       -- add_to_chat(158,'Super Revitalizer')
-	-- elseif commandArgs[1] == 'doom' then
-       -- send_command('input /item "Savior\'s Tonic" <me>')
-       -- add_to_chat(158,'Savior tonic')
-	-- elseif commandArgs[1] == 'amne' then
-       -- send_command('input /item "Moneta\'s Tonic"  <me>')
-       -- add_to_chat(158,'Monetas Tonic')
-	-- elseif commandArgs[1] == 'pois' then
-       -- send_command('input /item "Poison Buffer" <me>')
-       -- add_to_chat(158,'Poison Buffer')
-	-- elseif commandArgs[1] == 'petri' then
-       -- send_command('input /item "Mirror\'s Tonic" <me>')
-       -- add_to_chat(158,'Mirrors Tonic')
-	-- elseif commandArgs[1] == 'pote' then
-       -- send_command('input /item "Champion\'s Drink" <me>')
-       -- add_to_chat(158,'Champions Drink')
-	-- end
--- end
+send_command('wait 7;input /lockstyleset 1')

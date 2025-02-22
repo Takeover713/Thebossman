@@ -36,6 +36,8 @@ function user_job_setup()
 	send_command('bind @f10 gs c toggle TankAutoDefense')
 	send_command('bind ^@!` gs c cycle SkillchainMode')
 	
+	send_command('exec init.txt')
+	
 	autows = 'Atonement'
 	autowstp = 1500
 	

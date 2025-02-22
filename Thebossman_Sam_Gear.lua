@@ -36,20 +36,9 @@ function user_setup()
 	--send_command('bind !t send @run gs c toggle Autotankmode')
 	--send_command('bind ^q send @cor gs c toggle Autowsmode')
 	--send_command('bind @q send @sam gs c toggle Autowsmode')
-	send_command('bind !z send @cor //leadensalute <t>')
-	-- send_command('bind !v send @geo //fullcircle')
-	send_command('bind !x send @smn //thunderspark <t>')
-	send_command('bind ![ send @geo //fira3 <t>')
-	send_command('bind !] send @geo //Thundara3 <t>')
-	send_command('bind @x send @smn //voltstrike <t>')
-	send_command('bind ^x send @smn //apogee')
-	send_command('bind !t send @run gs c toggle Autotankmode')
-	send_command('bind !/ send @run //vivaciouspulse')
-	send_command('bind !b gs c buffup')
 	-- send_command('bind !pause gs c toggle AutoBuffMode')
-	send_command('bind != input /ja "Aggressor" <me>')
-	send_command('bind !- input /ja "Berserk" <me>')
-	send_command('bind !/ send @run //vivaciouspulse')
+
+	send_command('exec init.txt')
 	
 	autows = 'Tachi: Fudo'
 	autowstp = 1250

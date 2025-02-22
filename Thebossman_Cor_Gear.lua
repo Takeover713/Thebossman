@@ -23,6 +23,7 @@ function user_setup()
 	-- gear.magic_wsd_jse_back = {name="Camulus's Mantle",augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
 	-- gear.str_wsd_jse_back = {name="Camulus's Mantle",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 	
+	send_command('exec init.txt')
 	
 	autows_list = {['LeadenMelee']='Leaden Salute',['LeadenMelee2']='Leaden Salute',['SavageWeapons']='Savage Blade',['LastStand']='Last Stand',['SavageWeapon']='Savage Blade',['AeolianWeapons']='Aeolian Edge'}
 	autowstp = 1250
