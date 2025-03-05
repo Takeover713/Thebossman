@@ -279,10 +279,10 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
 	ammo="Crepuscular Pebble",
-    head="Sakpata's Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sakpata's Cuisses",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -295,10 +295,10 @@ function init_gear_sets()
 		
     sets.precast.WS.DT = {
 	ammo="Crepuscular Pebble",
-    head="Sakpata's Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sakpata's Cuisses",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -311,10 +311,10 @@ function init_gear_sets()
 
     sets.precast.WS.Acc = {
 	ammo="Crepuscular Pebble",
-    head="Sakpata's Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sakpata's Cuisses",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -334,7 +334,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 	ammo="Crepuscular Pebble",
-    head="Sakpata's Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
@@ -349,10 +349,10 @@ function init_gear_sets()
 	})
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
 	ammo="Crepuscular Pebble",
-    head="Sakpata's Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sakpata's Cuisses",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},

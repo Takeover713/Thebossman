@@ -235,8 +235,8 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = ({
 	ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-    body="Ignominy Cuirass +3",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Fallen's Flanchard +3",
     feet="Heathen's sollerets +3",
@@ -253,8 +253,8 @@ function init_gear_sets()
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-    body="Ignominy Cuirass +3",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Fallen's Flanchard +3",
     feet="Heathen's sollerets +3",
@@ -273,7 +273,7 @@ function init_gear_sets()
 	ammo="Knobkierrie",
    -- head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
 	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
     feet="Heath. Sollerets +3",
@@ -292,7 +292,7 @@ function init_gear_sets()
 	ammo="Knobkierrie",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
 	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
     feet="Heath. Sollerets +3",
@@ -309,15 +309,14 @@ function init_gear_sets()
 		
 	sets.precast.WS['Origin'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+    head="Heath. Bur. +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Sroda Ring",
     right_ring="Regal Ring",
@@ -328,15 +327,14 @@ function init_gear_sets()
     sets.precast.WS['Origin'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Origin'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+    head="Heath. Bur. +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Sroda Ring",
     right_ring="Regal Ring",
@@ -378,13 +376,13 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring", -- Heath. Earring +2
-    body="Ignominy Cuirass +3", -- nyame mail
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Sakpata's Gauntlets",
     ring1="Sroda Ring",
     ring2="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
-    legs="Ig. Flanchard +3",
+    legs="Ig. Flanchard +3", -- sakpata legs for damage limit
     feet="Heath. Sollerets +3"
 	})
     sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -396,7 +394,7 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring", -- Heath. Earring +2
-    body="Ignominy Cuirass +3", -- nyame mail
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Sakpata's Gauntlets",
     ring1="Sroda Ring",
     ring2="Niqmaddu Ring",
@@ -415,13 +413,13 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring", -- Heath. Earring +2
-    body="Ignominy Cuirass +3", -- nyame mail
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     ring1="Sroda Ring",
     ring2="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
-    legs="Ig. Flanchard +3", -- nyame Flachard
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3"
 	})
     sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -433,13 +431,13 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     ear1="Moonshade Earring",
     ear2="Thrud Earring", -- Heath. Earring +2
-    body="Ignominy Cuirass +3", -- nyame mail
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     ring1="Sroda Ring",
     ring2="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     waist="Sailfi Belt +1",
-    legs="Ig. Flanchard +3", -- nyame Flachard
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3"
 	})
     sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
@@ -523,7 +521,7 @@ function init_gear_sets()
     ammo="Knobkierrie",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
 	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+	body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Fallen's Flanchard +3",
     feet="Heathen's sollerets +3",
@@ -541,7 +539,7 @@ function init_gear_sets()
 	ammo="Knobkierrie",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
 	head="Heath. Bur. +3",
-    body="Ignominy Cuirass +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Fallen's Flanchard +3",
     feet="Heathen's sollerets +3",
