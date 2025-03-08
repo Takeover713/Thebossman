@@ -15,7 +15,7 @@ function user_setup()
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
 	
 	
-	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Entropy',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
+	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Cross Reaper',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
 	
 	send_command('exec init.txt')
 	
@@ -238,14 +238,14 @@ function init_gear_sets()
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Fallen's Flanchard +3",
-    feet="Heathen's sollerets +3",
-    neck="Abyssal Beads +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist="Fotia Belt",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring",
-    ring1="Regal Ring",
-    ring2="Niqmaddu Ring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 })
 
@@ -256,14 +256,14 @@ function init_gear_sets()
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Fallen's Flanchard +3",
-    feet="Heathen's sollerets +3",
-    neck="Abyssal Beads +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist="Fotia Belt",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring",
-    ring1="Regal Ring",
-    ring2="Niqmaddu Ring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
@@ -271,15 +271,14 @@ function init_gear_sets()
 	
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-   -- head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
+    head="Heath. Bur. +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Sroda Ring",
     right_ring="Epaminondas's Ring",
@@ -290,21 +289,21 @@ function init_gear_sets()
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
+    head="Heath. Bur. +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Sroda Ring",
     right_ring="Epaminondas's Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
-    sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    
+	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
 		
 	sets.precast.WS['Origin'] = set_combine(sets.precast.WS, {
@@ -312,7 +311,7 @@ function init_gear_sets()
     head="Heath. Bur. +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -330,7 +329,7 @@ function init_gear_sets()
     head="Heath. Bur. +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Heath. Sollerets +3",
     neck={ name="Abyssal Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -372,36 +371,34 @@ function init_gear_sets()
 	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
     head="Heath. Bur. +3",
-	--head="Hjarrandi Helm",
-    neck="Abyssal Beads +2",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring", -- Heath. Earring +2
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Sakpata's Gauntlets",
-    ring1="Sroda Ring",
-    ring2="Niqmaddu Ring",
-    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-    waist="Sailfi Belt +1",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Ig. Flanchard +3", -- sakpata legs for damage limit
-    feet="Heath. Sollerets +3"
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
     sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
     head="Heath. Bur. +3",
-	--head="Hjarrandi Helm",
-    neck="Abyssal Beads +2",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring", -- Heath. Earring +2
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Sakpata's Gauntlets",
-    ring1="Sroda Ring",
-    ring2="Niqmaddu Ring",
-    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-    waist="Sailfi Belt +1",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Ig. Flanchard +3", -- sakpata legs for damage limit
-    feet="Heath. Sollerets +3"
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
     sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
@@ -409,51 +406,49 @@ function init_gear_sets()
 	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
     head="Heath. Bur. +3",
-	--head="Hjarrandi Helm",
-    neck="Abyssal Beads +2",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring", -- Heath. Earring +2
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    ring1="Sroda Ring",
-    ring2="Niqmaddu Ring",
-    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-    waist="Sailfi Belt +1",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Heath. Sollerets +3"
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
     sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
     head="Heath. Bur. +3",
-	--head="Hjarrandi Helm",
-    neck="Abyssal Beads +2",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring", -- Heath. Earring +2
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    ring1="Sroda Ring",
-    ring2="Niqmaddu Ring",
-    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-    waist="Sailfi Belt +1",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Heath. Sollerets +3"
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
     sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 	
 	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS, {
 	ammo="Crepuscular Pebble",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Sakpata's Plate",
+    head="Heath. Bur. +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    neck="Abyssal Beads +2",
-    waist="Fotia Belt",
-    left_ear="Moonshade Earring",
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
-    left_ring="Regal Ring",
+    left_ring="Sroda Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
@@ -461,16 +456,16 @@ function init_gear_sets()
     sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Crepuscular Pebble",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Sakpata's Plate",
+    head="Heath. Bur. +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    neck="Abyssal Beads +2",
-    waist="Fotia Belt",
-    left_ear="Moonshade Earring",
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
-    left_ring="Regal Ring",
+    left_ring="Sroda Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
@@ -519,36 +514,34 @@ function init_gear_sets()
 	
     sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
     ammo="Knobkierrie",
-    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
-	body={ name="Nyame Mail", augments={'Path: B',}},
+    head="Heath. Bur. +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Fallen's Flanchard +3",
-    feet="Heathen's sollerets +3",
-    neck="Abyssal Beads +2",
-    waist="Sailfi belt +1",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring",
-    ring1="Sroda Ring",
-    ring2="Regal Ring",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 })
     sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}},
-	head="Heath. Bur. +3",
+    head="Heath. Bur. +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Fallen's Flanchard +3",
-    feet="Heathen's sollerets +3",
-    neck="Abyssal Beads +2",
-    waist="Sailfi belt +1",
-    ear1="Moonshade Earring",
-    ear2="Thrud Earring",
-    ring1="Sroda Ring",
-    ring2="Regal Ring",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Heath. Sollerets +3",
+    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Sroda Ring",
+    right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 	})
     sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
@@ -564,7 +557,7 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
-    right_ear="Thrud Earring",
+    right_ear="Thrud Earring", -- schere earring
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -581,7 +574,7 @@ function init_gear_sets()
     neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
-    right_ear="Thrud Earring",
+    right_ear="Thrud Earring", -- schere earring
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -699,11 +692,11 @@ function init_gear_sets()
 	sets.engaged = {
     ammo="Coiste Bodhar",
     head="Flam. Zucchetto +2",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Ig. Flanchard +3",
     feet="Flam. Gambieras +2",
-    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
@@ -744,11 +737,11 @@ function init_gear_sets()
     sets.engaged.FullAcc = {
     ammo="Coiste Bodhar",
     head="Flam. Zucchetto +2",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Ig. Flanchard +3",
     feet="Flam. Gambieras +2",
-    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
@@ -775,15 +768,15 @@ function init_gear_sets()
 	sets.engaged.DTLite = {
     ammo="Coiste Bodhar",
     head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck={ name="Abyssal Beads +2", augments={'Path: A',}},
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    ear1="Cessance Earring",
-    ear2="Telos Earring",
-	left_ring="Moonlight Ring",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Moonlight Ring",
     right_ring="Moonlight Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
 	
