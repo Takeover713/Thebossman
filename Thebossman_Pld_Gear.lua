@@ -482,7 +482,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}}, 
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -498,7 +498,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -529,7 +529,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}}, 
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -537,6 +537,7 @@ function init_gear_sets()
 	}
 		
     sets.midcast.Reprisal = {
+	sub="Priwen",
 	ammo="Sapience Orb",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body="Rev. Surcoat +3", -- shabti Cuirass +1 if i want to add duration but not ilvl 119 so maybe i dont want that
@@ -561,7 +562,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -577,7 +578,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -607,7 +608,7 @@ function init_gear_sets()
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1", -- Tuisto Earring
+    left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
     left_ring="Gelatinous Ring +1",
     right_ring="Eihwaz Ring",
@@ -667,8 +668,10 @@ function init_gear_sets()
 
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
+
 	
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
+	sub="Priwen",
 	ammo="Sapience Orb",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}}, dark matter augments phalanx +5
 	head="Sakpata's Helm",
@@ -687,6 +690,7 @@ function init_gear_sets()
     back={ name="Weard Mantle", augments={'VIT+4','DEX+3','Enmity+5','Phalanx +3',}},
 	})
 	sets.midcast.Phalanx.SIRD = set_combine(sets.midcast['Enhancing Magic'].SIRD, {
+	sub="Priwen",
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate

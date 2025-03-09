@@ -15,14 +15,14 @@ function user_setup()
 	state.DrainSwapWeaponMode = M{'Always','Never','300','1000'}
 	
 	
-	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Cross Reaper',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
+	autows_list = {['Caladbolg']='Torcleaver',['Anguta']='Insurgency',['Apocalypse']='Catastrophe',['Loxotic']='Judgment',['Naegling']='Savage Blade',['Foenaria']='Origin'}
 	
 	send_command('exec init.txt')
 	
 	-- autows = 'Torcleaver'
-	autowstp = 1500
+	autowstp = 1250
 	
-	autofood = 'Sublime sushi +1'
+	autofood = 'Grape Daifuku +1'
 	
 	buff_spell_lists = {
 	Auto = {	
