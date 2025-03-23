@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','Kiting','PDT','Block','MDT','Normal')
-	state.Weapons:options('BurtgangOchain','BurtgangAegis','NaeglingOchain','NaeglingAegis')
+	state.Weapons:options('BurtgangOchain','BurtgangAegis','Naegling')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -52,8 +52,7 @@ function init_gear_sets()
 		-- Weapons sets
 	sets.weapons.BurtgangOchain = {main="Burtgang",sub="Ochain"}
 	sets.weapons.BurtgangAegis = {main="Burtgang",sub="Aegis"}
-	sets.weapons.NaeglingOchain = {main="Naegling",sub="Ochain"}
-	sets.weapons.NaeglingAegis = {main="Naegling",sub="Aegis"}
+	sets.weapons.Naegling = {main="Naegling",sub="Blurred Shield +1"}
 	
 	--------------------------------------
 	-- Precast sets
@@ -927,3 +926,5 @@ function select_default_macro_book()
         set_macro_page(10, 15) --War/Etc
     end
 end
+
+send_command('exec init.txt')

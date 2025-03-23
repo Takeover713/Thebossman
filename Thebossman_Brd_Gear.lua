@@ -142,7 +142,7 @@ function init_gear_sets()
 	waist="Sailfi Belt +1",
 	left_ear="Ishvara Earring",
 	right_ear="Moonshade Earring",
-	left_ring="Sroda Ring",
+	left_ring="Ephramad's Ring",
     right_ring="Epaminondas's Ring",
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
@@ -165,7 +165,7 @@ function init_gear_sets()
 	waist="Sailfi Belt +1",
 	left_ear="Ishvara Earring",
 	right_ear="Moonshade Earring",
-	left_ring="Sroda Ring",
+	left_ring="Ephramad's Ring",
     right_ring="Epaminondas's Ring",
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
@@ -314,7 +314,31 @@ function init_gear_sets()
     right_ring="Minstrel's Ring",
     back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }
-	sets.midcast.Paeon = {range="Daurdabla"}
+	sets.midcast.Paeon = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	sets.midcast['Fowl Aubade'] = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	sets.midcast['Herb Pastoral'] = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	sets.midcast['Shining Fantasia'] = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	sets.midcast['Scop\'s Operetta'] = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	sets.midcast['Warding Round'] = {range="Daurdabla",
+		head={ name="Nyame Helm", augments={'Path: B',}},body="Volte Doublet",hands="Shrieker's Cuffs",legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",neck="Bathy choker +1",waist="Null Belt",left_ear="Eabani Earring",right_ear="Arete del luna +1",left_ring="Defending Ring",
+		right_ring="Moonlight Ring",back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},}
+	
 
 	sets.midcast.March = {    
 	main="Carnwenhan",
@@ -360,14 +384,14 @@ function init_gear_sets()
     head="Fili Calot +1",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
-    legs="Inyanga Shalwar +2",
+    legs="Mou. Seraweels +1",
     feet="Brioso Slippers +2",
-    neck="Moonbow Whistle +1",
-    waist="Aoidos' Belt",
+    neck="Mnbw. Whistle +1",
+    waist="Null Belt",
     left_ear="Etiolation Earring",
-    right_ear="Genmei Earring",
+    right_ear="Arete del Luna +1",
     left_ring="Defending Ring",
-    right_ring="Minstrel's Ring",
+    right_ring="Moonlight Ring",
     back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }
 
@@ -743,7 +767,7 @@ sets.midcast.Prelude = {
 		head="Aya. Zucchetto +2",
 		body="Ayanmo Corazza +2",
 		hands="Bunzi's Gloves",
-		legs={ name="Telchine Braconi", augments={'Accuracy+16','"Store TP"+6','DEX+8',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Telchine Pigaches", augments={'Accuracy+16','"Store TP"+4','DEX+8',}},
 		neck="Bard's Charm +2",
 		waist="Sailfi Belt +1",
@@ -784,7 +808,7 @@ sets.midcast.Prelude = {
 		ring2="Ilabrat Ring",
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		waist="Olseni Belt",
-		legs={ name="Telchine Braconi", augments={'Accuracy+16','"Store TP"+6','DEX+8',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Telchine Pigaches", augments={'Accuracy+16','"Store TP"+4','DEX+8',}},
 }
 	
@@ -793,7 +817,7 @@ sets.midcast.Prelude = {
 		head="Aya. Zucchetto +2",
 		body="Ayanmo Corazza +2",
 		hands="Bunzi's Gloves",
-		legs={ name="Telchine Braconi", augments={'Accuracy+16','"Store TP"+6','DEX+8',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Telchine Pigaches", augments={'Accuracy+16','"Store TP"+4','DEX+8',}},
 		neck="Bard's Charm +2",
 		waist="Sailfi Belt +1",

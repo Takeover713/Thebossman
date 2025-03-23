@@ -225,7 +225,7 @@ function init_gear_sets()
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
-    right_ring="Sroda Ring",
+    right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
 		
@@ -263,12 +263,12 @@ function init_gear_sets()
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
-    right_ring="Sroda Ring",
+    right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
 	
 	
-	--Sroda ring instead of regal ring, crepuscular knife, nyame helm r15, nyame legs r15, 
+	--Ephramad's Ring instead of regal ring, crepuscular knife, nyame helm r15, nyame legs r15, 
 	sets.precast.WS['Savage Blade'] = {ammo=gear.WSbullet,
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
@@ -280,7 +280,7 @@ function init_gear_sets()
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
-    right_ring="Sroda Ring",
+    right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
 
@@ -296,7 +296,7 @@ function init_gear_sets()
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
-    right_ring="Sroda Ring",
+    right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
 	
