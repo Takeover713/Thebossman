@@ -62,7 +62,8 @@ function init_gear_sets()
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
     body="Rev. Surcoat +3",
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+   --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Regal Gauntlets",
     legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     feet="Chev. Sabatons +1",
     neck="Moonlight Necklace",
@@ -78,7 +79,8 @@ function init_gear_sets()
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
     body="Rev. Surcoat +3",
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -108,7 +110,8 @@ function init_gear_sets()
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
     body="Rev. Surcoat +3",
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -446,8 +449,8 @@ function init_gear_sets()
 	}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Cessance Earring",ear2="Brutal Earring",}
-	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
+	sets.MaxTP = {}
+	sets.AccMaxTP = {}
 
 
 	--------------------------------------
@@ -476,7 +479,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -492,7 +496,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -523,7 +528,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -540,7 +546,7 @@ function init_gear_sets()
 	ammo="Sapience Orb",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body="Rev. Surcoat +3", -- shabti Cuirass +1 if i want to add duration but not ilvl 119 so maybe i dont want that
-    --hands="Regal Gauntlets", -- enhancing magic duration and SIRD
+    hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -556,7 +562,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -572,7 +579,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -602,7 +610,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands="Macabre Gaunt. +1",
+    --hands="Macabre Gaunt. +1",
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
     neck="Moonlight Necklace",
@@ -621,7 +630,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+   -- hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet="Sakpata's Leggings", -- need to dark matter augments on odyssean greaves
     neck="Moonlight Necklace",
@@ -636,7 +646,8 @@ function init_gear_sets()
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet="Sakpata's Leggings", -- need to dark matter augments on odyssean greaves
     neck="Moonlight Necklace",
