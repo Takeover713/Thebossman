@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','Kiting','PDT','Block','MDT','Normal')
-	state.Weapons:options('BurtgangOchain','BurtgangAegis','Naegling')
+	state.Weapons:options('BurtgangSrivatsa','BurtgangAegis','BurtgangOchain','Naegling')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -52,6 +52,7 @@ function init_gear_sets()
 		-- Weapons sets
 	sets.weapons.BurtgangOchain = {main="Burtgang",sub="Ochain"}
 	sets.weapons.BurtgangAegis = {main="Burtgang",sub="Aegis"}
+	sets.weapons.BurtgangSrivatsa = {main="Burtgang",sub="Srivatsa"}
 	sets.weapons.Naegling = {main="Naegling",sub="Blurred Shield +1"}
 	
 	--------------------------------------
@@ -542,7 +543,6 @@ function init_gear_sets()
 	}
 		
     sets.midcast.Reprisal = {
-	sub="Priwen",
 	ammo="Sapience Orb",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body="Rev. Surcoat +3", -- shabti Cuirass +1 if i want to add duration but not ilvl 119 so maybe i dont want that
@@ -681,7 +681,6 @@ function init_gear_sets()
 
 	
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
-	sub="Priwen",
 	ammo="Sapience Orb",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}}, dark matter augments phalanx +5
 	head="Sakpata's Helm",
@@ -700,7 +699,6 @@ function init_gear_sets()
     back={ name="Weard Mantle", augments={'VIT+4','DEX+3','Enmity+5','Phalanx +3',}},
 	})
 	sets.midcast.Phalanx.SIRD = set_combine(sets.midcast['Enhancing Magic'].SIRD, {
-	sub="Priwen",
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
@@ -807,7 +805,7 @@ function init_gear_sets()
     sets.MP = {head="Chev. Armet +1",neck="Coatl Gorget +1",ear2="Ethereal Earring",waist="Flume Belt +1",feet="Rev. Leggings +1"}
 	sets.passive.AbsorbMP = {head="Chev. Armet +1",neck="Coatl Gorget +1",ear2="Ethereal Earring",waist="Flume Belt +1",feet="Rev. Leggings +1"}
     sets.MP_Knockback = {}
-    sets.Twilight = {head="Twilight Helm", body="Twilight Mail"}
+    sets.Twilight = {head="Crepuscular Helm", body="Crepuscular Mail"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
     
@@ -846,8 +844,8 @@ function init_gear_sets()
         body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
         back="Moonlight Cape",waist="Asklepian Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
 		
-    sets.defense.PDT_Reraise = set_combine(sets.defense.PDT_HP,{head="Twilight Helm",body="Twilight Mail"})
-    sets.defense.MDT_Reraise = set_combine(sets.defense.MDT_HP,{head="Twilight Helm",body="Twilight Mail"})
+    sets.defense.PDT_Reraise = set_combine(sets.defense.PDT_HP,{head="Crepuscular Helm",body="Crepuscular Mail"})
+    sets.defense.MDT_Reraise = set_combine(sets.defense.MDT_HP,{head="Crepuscular Helm",body="Crepuscular Mail"})
 		
 	--------------------------------------
 	-- Engaged sets

@@ -212,7 +212,7 @@ function init_gear_sets()
 	sets.Kiting = {}
 	--feet="Danzo Sune-ate"
 
-    --sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
+    sets.Reraise = {head="Crepuscular Helm",body="Crepuscular Mail"}
 	
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.Skillchain = {}

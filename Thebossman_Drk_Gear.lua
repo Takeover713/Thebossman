@@ -219,7 +219,7 @@ function init_gear_sets()
 	ring1="Archon Ring",
     ring2="Stikini Ring +1",
 	legs="Nyame Flachard",
-	ear1="Dark Earring", -- Crep. Earring
+	ear1="Crep. Earring",
 	ear2="Dignitary's Earring",
 	waist="Oneiros Rope",
 	feet="Heath. Sollerets +3",
@@ -231,7 +231,7 @@ function init_gear_sets()
 	sets.DrainWeapon = {main="Misanthropy",sub="Alber Strap"}
 	
 	--sets.AbsorbWeapon = {main="Liberator",sub="Khonsu",range="Ullr",ammo=empty}
-	--sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 
+	sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 
 	
 	--sets.midcast.Cure = {}
 	
@@ -684,9 +684,9 @@ function init_gear_sets()
     back="Moonbeam Cape",
 }
 
-	sets.idle.Weak = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
+	sets.idle.Weak = set_combine(sets.idle, {head="Crepuscular Helm",body="Crepuscular Mail"})
 		
-	sets.idle.Reraise = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
+	sets.idle.Reraise = set_combine(sets.idle, {head="Crepuscular Helm",body="Crepuscular Mail"})
            
     -- Defense sets
 	sets.defense.PDT = {
@@ -705,7 +705,7 @@ function init_gear_sets()
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 		
-	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
+	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Crepuscular Helm",body="Crepuscular Mail"})
 
 	sets.defense.MDT = {
     ammo="Seething Bomblet +1",
@@ -723,7 +723,7 @@ function init_gear_sets()
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 		
-	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Twilight Helm",body="Twilight Mail"})
+	sets.defense.MDTReraise = set_combine(sets.defense.MDT, {head="Crepuscular Helm",body="Crepuscular Mail"})
 		
 	sets.defense.MEVA = {
     ammo="Seething Bomblet +1",
@@ -742,7 +742,7 @@ function init_gear_sets()
 }
      
 	sets.Kiting = {legs="Carmine Cuisses +1"}
-	--sets.passive.Reraise = {head="Twilight Helm",body="Twilight Mail"}
+	--sets.passive.Reraise = {head="Crepuscular Helm",body="Crepuscular Mail"}
      
 	-- Engaged sets
 	sets.engaged = {
