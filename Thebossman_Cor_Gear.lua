@@ -9,6 +9,13 @@ function user_setup()
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
 	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon','Absorb')
 	state.CompensatorMode:options('Always','300','Never','1000')
+	
+	-- weapon_sets = {
+        -- ['Default'] = {'None','Naegling','Maxentius','Crocea','Tauret','EnspellOnly'},
+        -- ['Dual'] = {'DualWeapons','DualWeaponsAcc','DualMaxentius','DualCrocea','DualMaxentiusAcc','DualPrime','DualAeolian','DualEnspellOnly'},
+        -- ['Dynamis'] = {'DualCroceaSavageBlade','DualCrocea','DualTauretCrocea','DualAeolian'},
+        -- ['Proc'] = {'ProcSword','ProcDagger','DualProcSword','DualProcDagger'},
+    -- }
 
     gear.RAbullet = "Chrono Bullet" -- Chrono Bullet
     gear.WSbullet = "Chrono Bullet"
@@ -44,11 +51,6 @@ function user_setup()
 	send_command('bind ^@!\\\\ gs c toggle LuzafRing')
 	send_command('bind @f7 gs c toggle RngHelper')
 
-	--send_command('bind !r gs c weapons SingleWeapon;gs c update')
-	--send_command('bind @q gs c weapons MaccWeapons;gs c update')
-	--send_command('bind ^q gs c weapons DualRangedWeapons;gs c update')
-	--send_command('bind !q gs c weapons SavageWeapons;gs c update')
-
     select_default_macro_book()
 end
 
@@ -57,6 +59,18 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
+	
+	-- Weapons sets
+	sets.weapons.SavageWeapons = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
+	sets.weapons.SavageWeapon = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
+	sets.weapons.Absorb = {main="Naegling",sub="Nusku Shield",range=empty}
+	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
+	sets.weapons.LeadenMelee = {main="Naegling",sub='Tauret',range="Death Penalty"}
+	sets.weapons.LeadenMelee2 = {main={ name="Rostam", augments={'Path: B',}},sub='Tauret',range="Death Penalty"}
+	--sets.weapons.Prime = {main="Naegling",sub="Gleti's Knife",range="Earp"}
+	sets.weapons.LeadenRanged = {main={ name="Rostam", augments={'Path: A',}},sub='Tauret',range="Death Penalty"}
+	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
+	--sets.weapons.RostamRanged = {main="Rostam",sub={name="Rostam", bag="Wardrobe 3"},range="Death Penalty"}
 
     -- Precast Sets
 
@@ -521,7 +535,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
 	ammo=gear.RAbullet,
-	head="Malignance Chapeau",
+	head="Null masque",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Carmine Cuisses +1",
@@ -547,18 +561,6 @@ function init_gear_sets()
     sets.Kiting = {legs="Carmine Cuisses +1",feet="Hermes' Sandals +1"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
-
-	-- Weapons sets
-	sets.weapons.SavageWeapons = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
-	sets.weapons.SavageWeapon = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
-	sets.weapons.Absorb = {main="Naegling",sub="Nusku Shield",range=empty}
-	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
-	sets.weapons.LeadenMelee = {main="Naegling",sub='Tauret',range="Death Penalty"}
-	sets.weapons.LeadenMelee2 = {main={ name="Rostam", augments={'Path: B',}},sub='Tauret',range="Death Penalty"}
-	--sets.weapons.Prime = {main="Naegling",sub="Gleti's Knife",range="Earp"}
-	sets.weapons.LeadenRanged = {main={ name="Rostam", augments={'Path: A',}},sub='Tauret',range="Death Penalty"}
-	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
-	--sets.weapons.RostamRanged = {main="Rostam",sub={name="Rostam", bag="Wardrobe 3"},range="Death Penalty"}
 	
 	--main={name="Rostam", bag="Wardrobe 2"},
     -- Engaged sets

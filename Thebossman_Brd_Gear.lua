@@ -662,24 +662,13 @@ sets.midcast.Prelude = {
 	sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast, {main=gear.grioavolr_fc_staff,sub="Clemency Grip"})
 
 	-- Resting sets
-	sets.resting = {	
-	main="Chatoyant Staff",
-	head="Goliard Chapeau",
-	body="Chelona Blazer",
-	hands="Oracle's Gloves",
-	legs="Yigit Seraweels",
-	feet="Chelona Boots +1",
-	legs="Goliard Clogs",
-	waist="Cleric's Belt",
-	neck="Grandiose Chain",
-	back="Vita Cape",
-	left_ear="Relaxing Earring"}
+	--sets.resting = {}
 	
 	sets.idle = {    
     main="Carnwenhan",
     sub="Genmei Shield",
 	range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Null Masque",
     body="Volte Doublet",
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -697,7 +686,7 @@ sets.midcast.Prelude = {
     main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Null Masque",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -717,7 +706,7 @@ sets.midcast.Prelude = {
     main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Null Masque",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -735,7 +724,7 @@ sets.midcast.Prelude = {
     main="Carnwenhan",
     sub="Genmei Shield",
     range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Null Masque",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},

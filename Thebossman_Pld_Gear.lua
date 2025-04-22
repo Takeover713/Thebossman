@@ -721,7 +721,7 @@ function init_gear_sets()
 
     sets.resting = {
 	ammo="Staunch Tathlum +1",
-    head="Sakpata's Helm",
+	head="Null Masque",
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
@@ -738,7 +738,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
 	ammo="Staunch Tathlum +1",
-    head="Sakpata's Helm",
+    head="Null Masque",
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
@@ -790,11 +790,11 @@ function init_gear_sets()
 
 	sets.Kiting = {legs="Carmine Cuisses +1"}
 
-	sets.latent_refresh = {waist="Fucho-no-obi"}
-	sets.latent_refresh_grip = {sub="Oneiros Grip"}
-	sets.latent_regen = {ring1="Apeile Ring +1",ring2="Apeile Ring"}
-	sets.DayIdle = {}
-	sets.NightIdle = {}
+	--sets.latent_refresh = {waist="Fucho-no-obi"}
+	--sets.latent_refresh_grip = {sub="Oneiros Grip"}
+	--sets.latent_regen = {ring1="Apeile Ring +1",ring2="Apeile Ring"}
+	--sets.DayIdle = {}
+	--sets.NightIdle = {}
 
 	--------------------------------------
     -- Defense sets

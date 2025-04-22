@@ -643,18 +643,18 @@ function init_gear_sets()
      sets.resting = {}
            
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Lugra Earring +1",ear2="Lugra Earring",}
-	sets.AccMaxTP = {ear1="Zennaroi Earring",ear2="Telos Earring"}
-	sets.AccDayMaxTPWSEars = {ear1="Zennaroi Earring",ear2="Telos Earring"}
-	sets.DayMaxTPWSEars = {ear1="Ishvara Earring",ear2="Brutal Earring",}
-	sets.AccDayWSEars = {ear1="Zennaroi Earring",ear2="Telos Earring"}
-	sets.DayWSEars = {ear1="Brutal Earring",ear2="Moonshade Earring",}
+	-- sets.MaxTP = {}
+	-- sets.AccMaxTP = {}
+	-- sets.AccDayMaxTPWSEars = {}
+	-- sets.DayMaxTPWSEars = {}
+	-- sets.AccDayWSEars = {}
+	-- sets.DayWSEars = {}
      
             -- Idle sets legs="Carmine Cuisses +1",
            
     sets.idle = {
     ammo="Staunch Tathlum +1",
-    head="Sakpata's Helm",
+    head="Null masque",
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Carmine Cuisses +1",
