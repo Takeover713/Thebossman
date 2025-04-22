@@ -451,7 +451,8 @@ function init_gear_sets()
 
 	sets.midcast['Absorb-TP'] = {
 		ammo="Pemphredo Tathlum",
-		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		--head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+		head="Null Masque",
 		body="Chasseur's Frac +3",
 		hands="Chasseur's Gants +3",
 		legs="Chas. Culottes +3",
