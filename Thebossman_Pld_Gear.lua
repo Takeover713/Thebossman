@@ -213,15 +213,9 @@ function init_gear_sets()
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
     
-    sets.precast.Step = {ammo="Aurgelmir Orb +1",
-        head="Carmine Mask +1",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
-        body="Flamma Korazin +2",hands="Regal Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Flam. Gambieras +2"}
+    sets.precast.Step = {}
 		
-	sets.precast.JA['Violent Flourish'] = {ammo="Aurgelmir Orb +1",
-        head="Flam. Zucchetto +2",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-        body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Defending Ring",ring2="Stikini Ring +1",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
+	sets.precast.JA['Violent Flourish'] = {}
 		
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
@@ -690,7 +684,8 @@ function init_gear_sets()
     legs="Sakpata's Cuisses",
     --feet={ name="Odyssean Greaves", augments={'Crit.hit rate+3','Pet: Mag. Acc.+12','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}, need dark matter augments for phalanx +5
 	feet="Souveran Schuhs +1",
-    neck="Unmoving Collar +1",
+    --neck="Unmoving Collar +1",
+	neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
     right_ear="Mimir Earring",
@@ -752,20 +747,11 @@ function init_gear_sets()
     back="Moonbeam Cape",
 	}
 		
-    sets.idle.PDT = {main="Sakpata's Sword",sub="Sacro Bulwark",ammo="Eluder's Sachet",
-		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Moonlight Cape",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+    sets.idle.PDT = {}
 		
-    sets.idle.Block = {main="Deacon Sword",sub="Ochain",ammo="Staunch Tathlum +1",
-		head="Chevalier's Armet +1",neck="Diemer Gorget",ear1="Creed Earring",ear2="Thureous Earring",
-		body="Sakpata's Breastplate",hands="Souv. Handsch. +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"}
+    sets.idle.Block = {}
 		
-    sets.idle.MDT = {main="Sakpata's Sword",sub="Aegis",ammo="Staunch Tathlum +1",
-		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Archon Ring",ring2="Shadow Ring",
-		back=gear.fastcast_jse_back,waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+    sets.idle.MDT = {}
 
 	sets.idle.Tank = {
 	ammo="Staunch Tathlum +1",
@@ -783,10 +769,7 @@ function init_gear_sets()
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 		
-	sets.idle.Kiting = {main="Sakpata's Sword",sub="Sacro Bulwark",ammo="Eluder's Sachet",
-		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Moonlight Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippo. Socks +1"}
+	sets.idle.Kiting = {}
 
 	sets.Kiting = {legs="Carmine Cuisses +1"}
 
@@ -892,20 +875,11 @@ function init_gear_sets()
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 		
-	sets.engaged.DDTank = {ammo="Hasty Pinion +1",
-		head="Sakpata's Helm",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Cessance Earring",
-		body="Tartarus Platemail",hands="Sakpata's Gauntlets",ring1="Defending Ring",ring2="Patricius Ring",
-		back="Weard Mantle",waist="Sailfi Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+	sets.engaged.DDTank = {}
 		
-	sets.engaged.Acc.DDTank = {ammo="Hasty Pinion +1",
-		head="Sakpata's Helm",neck="Loricate Torque +1",ear1="Mache Earring +1",ear2="Telos Earring",
-		body="Tartarus Platemail",hands="Sakpata's Gauntlets",ring1="Defending Ring",ring2="Patricius Ring",
-		back="Weard Mantle",waist="Sailfi Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+	sets.engaged.Acc.DDTank = {}
 		
-	sets.engaged.NoShellTank = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum +1",
-        head="Jumalik Helm",neck="Loricate Torque +1",ear1="Thureous Earring",ear2="Etiolation Earring",
-        body="Rev. Surcoat +3",hands="Sakpata's Gauntlets",ring1="Defending Ring",ring2="Moonlight Ring",
-        back="Moonlight Cape",waist="Flume Belt +1",legs=gear.odyssean_fc_legs,feet="Cab. Leggings +1"}
+	sets.engaged.NoShellTank = {}
 		
     sets.engaged.Reraise = set_combine(sets.engaged.Tank, sets.Reraise)
     sets.engaged.Acc.Reraise = set_combine(sets.engaged.Acc.Tank, sets.Reraise)

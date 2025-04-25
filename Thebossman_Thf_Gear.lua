@@ -257,7 +257,7 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {    ammo="Staunch Tathlum +1",
-    head="Malignance Chapeau",
+    head="Null Masque",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
