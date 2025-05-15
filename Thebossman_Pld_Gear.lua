@@ -62,9 +62,9 @@ function init_gear_sets()
     sets.Enmity = {
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
-    body="Rev. Surcoat +3",
-   --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-	hands="Regal Gauntlets",
+    body="Chev. Cuirass +3",
+	hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	--hands="Regal Gauntlets",
     legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     feet="Chev. Sabatons +1",
     neck="Moonlight Necklace",
@@ -79,7 +79,7 @@ function init_gear_sets()
     sets.Enmity.SIRD = {
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
-    body="Rev. Surcoat +3",
+    body="Chev. Cuirass +3",
     --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},

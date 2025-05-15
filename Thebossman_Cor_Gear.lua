@@ -8,7 +8,7 @@ function user_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
 	state.Weapons:options('LeadenMelee','LeadenMelee2','AeolianWeapons','LeadenRanged','LastStand','SavageWeapons','SavageWeapon','Absorb')
-	state.CompensatorMode:options('Always','300','Never','1000')
+	state.CompensatorMode:options('Always','300','1000','Never')
 	
 	-- weapon_sets = {
         -- ['Default'] = {'None','Naegling','Maxentius','Crocea','Tauret','EnspellOnly'},
@@ -82,16 +82,22 @@ function init_gear_sets()
     sets.precast.JA['Random Deal'] = {body="Lanun Frac +3"}
     sets.precast.FoldDoubleBust = {hands="Lanun Gants +1"}
     
-	sets.precast.CorsairRoll = {
-	main={ name="Rostam", augments={'Path: C',}},
-	head="Lanun Tricorne +3",
-	neck="Regal Necklace",
-	hands="Chasseur's Gants +3",
-	ring2="Luzaf's Ring",
-    back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},
-	feet="Malignance Boots",}
+	sets.precast.CorsairRoll = { main={ name="Rostam", augments={'Path: C',}},range="Compensator",head="Lanun Tricorne +3",neck="Regal Necklace",hands="Chasseur's Gants +3",
+		back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},feet="Malignance Boots"}
+
+	-- sets.precast.CorsairRoll = {
+	-- main={ name="Rostam", augments={'Path: C',}},
+	-- head="Lanun Tricorne +3",
+	-- neck="Regal Necklace",
+	-- hands="Chasseur's Gants +3",
+	-- ring2="Luzaf's Ring",
+	-- back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},
+	-- feet="Malignance Boots"}
+
 
     sets.precast.LuzafRing = {ring2="Luzaf's Ring"}
+	
+	sets.precast.CorsairRoll["Bolter's Roll"] = {main={ name="Rostam", augments={'Path: C',}},}
     
     sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, {legs="Chas. Culottes +1"})
     sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, {feet="Chass. Bottes +3"})
