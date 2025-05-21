@@ -83,7 +83,7 @@ function init_gear_sets()
     --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet={ name="Odyssean Greaves", augments={'MND+9','Pet: Mag. Acc.+3','Chance of successful block +3','Accuracy+20 Attack+20','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
+    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
@@ -114,7 +114,7 @@ function init_gear_sets()
     --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet={ name="Odyssean Greaves", augments={'MND+9','Pet: Mag. Acc.+3','Chance of successful block +3','Accuracy+20 Attack+20','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
+    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
@@ -627,7 +627,7 @@ function init_gear_sets()
    -- hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet={ name="Odyssean Greaves", augments={'MND+9','Pet: Mag. Acc.+3','Chance of successful block +3','Accuracy+20 Attack+20','Mag. Acc.+1 "Mag.Atk.Bns."+1',}}, -- need to dark matter augments on odyssean greaves
+    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}}, -- need to dark matter augments on odyssean greaves
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
@@ -643,7 +643,7 @@ function init_gear_sets()
     --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-	feet={ name="Odyssean Greaves", augments={'MND+9','Pet: Mag. Acc.+3','Chance of successful block +3','Accuracy+20 Attack+20','Mag. Acc.+1 "Mag.Atk.Bns."+1',}}, -- need to dark matter augments on odyssean greaves
+	feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}}, -- need to dark matter augments on odyssean greaves
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
