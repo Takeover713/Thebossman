@@ -682,8 +682,7 @@ function init_gear_sets()
 	body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     legs="Sakpata's Cuisses",
-    --feet={ name="Odyssean Greaves", augments={'Crit.hit rate+3','Pet: Mag. Acc.+12','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}, need dark matter augments for phalanx +5
-	feet="Souveran Schuhs +1",
+    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     --neck="Unmoving Collar +1",
 	neck="Moonlight Necklace",
     waist="Audumbla Sash",
@@ -699,7 +698,7 @@ function init_gear_sets()
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
     hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet="Souveran Schuhs +1", -- need to dark matter augments on odyssean greaves
+    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Odnowa Earring +1",
