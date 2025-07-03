@@ -244,7 +244,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Sroda Ring",
     right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
@@ -282,7 +282,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Sroda Ring",
     right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
@@ -299,7 +299,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Sroda Ring",
     right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
@@ -315,7 +315,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Sroda Ring",
     right_ring="Ephramad's Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
