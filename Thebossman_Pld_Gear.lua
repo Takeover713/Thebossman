@@ -4,7 +4,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal','Acc')
     state.HybridMode:options('Tank','DDTank','Normal')
     state.WeaponskillMode:options('Match','Normal', 'Acc')
-    state.CastingMode:options('Normal','SIRD')
+    state.CastingMode:options('SIRD','Normal')
 	state.Passive:options('None','AbsorbMP')
     state.PhysicalDefenseMode:options('PDT_HP','PDT','PDT_Reraise')
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
@@ -205,10 +205,7 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'].DT = set_combine(sets.Enmity.DT, {})
 
     -- Waltz set (chr and vit)
-    sets.precast.Waltz = {ammo="Aurgelmir Orb +1",
-		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Rev. Surcoat +3",hands="Regal Gauntlets",ring1="Asklepian Ring",ring2="Valseur's Ring",
-		back="Moonlight Cape",waist="Chaac Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+    sets.precast.Waltz = {}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -452,15 +449,9 @@ function init_gear_sets()
 	-- Midcast sets
 	--------------------------------------
 
-    sets.midcast.FastRecast = {main="Sakpata's Sword",sub="Chanter's Shield",ammo="Hasty Pinion +1",
-		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
-		body="Rev. Surcoat +3",hands="Leyline Gloves",ring1="Gelatinous Ring +1",ring2="Kishar Ring",
-		back=gear.fastcast_jse_back,waist="Creed Baudrier",legs=gear.odyssean_fc_legs,feet="Odyssean Greaves"}
+    sets.midcast.FastRecast = {}
 		
-	sets.midcast.FastRecast.DT = {main="Sakpata's Sword",sub="Ochain",ammo="Staunch Tathlum +1",
-        head="Souv. Schaller +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Rev. Surcoat +3",hands="Souv. Handsch. +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-        back="Moonlight Cape",waist="Creed Baudrier",legs="Souv. Diechlings +1",feet="Souveran Schuhs +1"}
+	sets.midcast.FastRecast.DT = {}
 
     sets.midcast.Flash = set_combine(sets.Enmity, {})
 	sets.midcast.Flash.SIRD = set_combine(sets.Enmity.SIRD, {})
@@ -675,24 +666,28 @@ function init_gear_sets()
 
 	
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
-	ammo="Sapience Orb",
+		main="Sakpata's Sword", 
+		Sub="Priwen",
+		ammo="Sapience Orb",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}}, dark matter augments phalanx +5
-	head="Sakpata's Helm",
+		head="Sakpata's Helm",
     --body="Odyss. Chestplate", dark matter augments phalanx +5
-	body={ name="Sakpata's Plate", augments={'Path: A',}},
-    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    legs="Sakpata's Cuisses",
-    feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+		body={ name="Sakpata's Plate", augments={'Path: A',}},
+		hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+		legs="Sakpata's Cuisses",
+		feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     --neck="Unmoving Collar +1",
-	neck="Moonlight Necklace",
-    waist="Audumbla Sash",
-    left_ear="Odnowa Earring +1",
-    right_ear="Mimir Earring",
-    left_ring="Moonlight Ring",
-    right_ring="Moonlight Ring",
-    back={ name="Weard Mantle", augments={'VIT+4','DEX+3','Enmity+5','Phalanx +3',}},
+		neck="Moonlight Necklace",
+		waist="Audumbla Sash",
+		left_ear="Odnowa Earring +1",
+		right_ear="Mimir Earring",
+		left_ring="Moonlight Ring",
+		right_ring="Moonlight Ring",
+		back={ name="Weard Mantle", augments={'VIT+4','DEX+3','Enmity+5','Phalanx +3',}},
 	})
 	sets.midcast.Phalanx.SIRD = set_combine(sets.midcast['Enhancing Magic'].SIRD, {
+	main="Sakpata's Sword", 
+	Sub="Priwen",
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
@@ -791,40 +786,19 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
     
-    sets.defense.Block = {main="Sakpata's Sword",sub="Ochain",ammo="Eluder's Sachet",
-		head="Chev. Armet +1",neck="Diemer Gorget",ear1="Creed Earring",ear2="Thureous Earring",
-		body="Sakpata's Breastplate",hands="Souv. Handsch. +1",ring1="Defending Ring",ring2="Warden's Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Souveran Schuhs +1"}
+    sets.defense.Block = {}
 		
-	sets.defense.PDT = {main="Sakpata's Sword",sub="Ochain",ammo="Eluder's Sachet",
-		head="Sakpata's Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Sakpata's Breastplate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Warden's Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+	sets.defense.PDT = {}
 		
-    sets.defense.PDT_HP = {main="Sakpata's Sword",sub="Ochain",ammo="Eluder's Sachet",
-        head="Souv. Schaller +1",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Rev. Surcoat +3",hands="Souv. Handsch. +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-        back="Moonlight Cape",waist="Creed Baudrier",legs="Arke Cosc. +1",feet="Souveran Schuhs +1"}
+    sets.defense.PDT_HP = {}
 		
-	sets.defense.MDT = {main="Malignance Sword",sub="Aegis",ammo="Staunch Tathlum +1",
-		head="Nyame Helm",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
-		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Archon Ring",ring2="Shadow Ring",
-		back=gear.fastcast_jse_back,waist="Carrier's Sash",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+	sets.defense.MDT = {}
 		
-    sets.defense.MDT_HP = {main="Sakpata's Sword",sub="Aegis",ammo="Staunch Tathlum +1",
-        head="Sakpata's Helm",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-        back="Moonlight Cape",waist="Carrier's Sash",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+    sets.defense.MDT_HP = {}
 
-	sets.defense.MEVA = {main="Malignance Sword",sub="Aegis",ammo="Staunch Tathlum +1",
-		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Purity Ring",ring2="Shadow Ring",
-		back=gear.fastcast_jse_back,waist="Asklepian Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+	sets.defense.MEVA = {}
 		
-    sets.defense.MEVA_HP = {main="Malignance Sword",sub="Aegis",ammo="Staunch Tathlum +1",
-        head="Sakpata's Helm",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-        body="Sakpata's Plate",hands="Sakpata's Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-        back="Moonlight Cape",waist="Asklepian Belt",legs="Sakpata's Cuisses",feet="Sakpata's Leggings"}
+    sets.defense.MEVA_HP = {}
 		
     sets.defense.PDT_Reraise = set_combine(sets.defense.PDT_HP,{head="Crepuscular Helm",body="Crepuscular Mail"})
     sets.defense.MDT_Reraise = set_combine(sets.defense.MDT_HP,{head="Crepuscular Helm",body="Crepuscular Mail"})
@@ -849,10 +823,7 @@ function init_gear_sets()
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 
-    sets.engaged.Acc = {main="Sakpata's Sword",sub="Ochain",ammo="Hasty Pinion +1",
-        head="Flam. Zucchetto +2",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
-        body=gear.valorous_wsd_body,hands="Sakpata's Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-        back="Ground. Mantle +1",waist="Tempus Fugit",legs="Carmine Cuisses +1",feet="Sulev. Leggings +2"}
+    sets.engaged.Acc = {}
 
     sets.engaged.DW = {}
 
