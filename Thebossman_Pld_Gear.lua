@@ -9,7 +9,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT_HP','PDT','PDT_Reraise')
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
-	state.IdleMode:options('Tank','Kiting','PDT','Block','MDT','Normal')
+	state.IdleMode:options('Tank','Normal','Aminon')
 	state.Weapons:options('BurtgangSrivatsa','BurtgangAegis','BurtgangOchain','Naegling')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
@@ -740,6 +740,21 @@ function init_gear_sets()
     right_ring="Moonlight Ring",
     back="Moonbeam Cape",
 	}
+	
+	sets.idle.Aminon = {ammo="Vanir Battery",
+    head="Null Masque",
+    body="Makora Meikogai",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Coatl Gorget +1",
+    waist="Carrier's Sash",
+    left_ear="Odnowa Earring +1",
+    right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
+    left_ring="Vexer Ring +1",
+    right_ring="Apeile Ring +1",
+    back="Null Shawl",
+}
 		
     sets.idle.PDT = {}
 		
@@ -769,7 +784,7 @@ function init_gear_sets()
 
 	--sets.latent_refresh = {waist="Fucho-no-obi"}
 	--sets.latent_refresh_grip = {sub="Oneiros Grip"}
-	--sets.latent_regen = {ring1="Apeile Ring +1",ring2="Apeile Ring"}
+	--sets.latent_regen = {ring1="Apeile Ring",ring2="Apeile Ring +1"}
 	--sets.DayIdle = {}
 	--sets.NightIdle = {}
 
