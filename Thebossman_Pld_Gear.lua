@@ -267,7 +267,7 @@ function init_gear_sets()
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {}) -- waist="Siegel Sash"
 	sets.precast.FC['Enhancing Magic'].DT = set_combine(sets.precast.FC.DT, {}) -- waist="Siegel Sash"
 	
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, {ear2="Nourish. Earring"}) -- neck="Diemer Gorget",ear2="Nourish. Earring"
+	sets.precast.FC.Cure = set_combine(sets.precast.FC, {}) -- neck="Diemer Gorget",ear2="Nourish. Earring"
   
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
@@ -462,21 +462,22 @@ function init_gear_sets()
 	sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
 
     sets.midcast.Cure = {
-	ammo="Staunch Tathlum +1",
-    head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    --hands="Macabre Gaunt. +1",
-	hands="Regal Gauntlets",
-    legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
-    neck="Moonlight Necklace",
-    waist="Audumbla Sash",
-    left_ear="Tuisto Earring",
-    right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}}, 
-    left_ring="Gelatinous Ring +1",
-    right_ring="Eihwaz Ring",
+	ammo="Sapience Orb",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Macabre Gaunt. +1", augments={'Path: A',}},
+    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+    neck="Sacro Gorget",
+    waist="Carrier's Sash",
+    left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
+    left_ring="Moonlight Ring",
+    --right_ring="Vengeful Ring",
+	right_ring="Eihwaz Ring",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},
 	}
+		
 		
     sets.midcast.Cure.SIRD = {
 	ammo="Staunch Tathlum +1",
@@ -544,19 +545,19 @@ function init_gear_sets()
 	}
 
 	sets.Self_Healing = {
-	ammo="Staunch Tathlum +1",
-    head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    --hands="Macabre Gaunt. +1",
-	hands="Regal Gauntlets",
-    legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
-    neck="Moonlight Necklace",
-    waist="Audumbla Sash",
-    left_ear="Tuisto Earring",
+	ammo="Sapience Orb",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Macabre Gaunt. +1", augments={'Path: A',}},
+    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+    neck="Sacro Gorget",
+    waist="Carrier's Sash",
+    left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     right_ear={ name="Chev. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 VIT+7',}},
-    left_ring="Gelatinous Ring +1",
-    right_ring="Eihwaz Ring",
+    left_ring="Moonlight Ring",
+    --right_ring="Vengeful Ring",
+	right_ring="Eihwaz Ring",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},
 	}
 		
@@ -577,19 +578,6 @@ function init_gear_sets()
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},
 	}
 	
-	-- ammo="Staunch Tathlum +1",
-    -- head="Souv. Schaller +1",
-    -- neck="Unmoving Collar +1",
-    -- ear1="Tuisto Earring",
-    -- ear2="Chev. Earring +1",
-    -- body="Souv. Cuirass +1",
-    -- hands="Regal Gauntlets",
-    -- ring1="Moonlight Ring",
-    -- ring2="Gelatinous Ring +1",
-    -- back="Moonlight Cape",
-    -- waist="Plat. Mog. Belt",
-    -- legs="Founder's Hose",
-    -- feet="Odyssean Greaves"
 		
 	sets.Self_Healing.DT = {
 	ammo="Staunch Tathlum +1",
@@ -671,8 +659,7 @@ function init_gear_sets()
 		ammo="Sapience Orb",
     --head={ name="Odyssean Helm", augments={'Accuracy+21','Weapon skill damage +5%','STR+10','Attack+10',}}, dark matter augments phalanx +5
 		head="Sakpata's Helm",
-    --body="Odyss. Chestplate", dark matter augments phalanx +5
-		body={ name="Sakpata's Plate", augments={'Path: A',}},
+		body={ name="Odyss. Chestplate", augments={'"Drain" and "Aspir" potency +1','Pet: Phys. dmg. taken -2%','Phalanx +2','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
 		hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 		legs="Sakpata's Cuisses",
 		feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
@@ -690,7 +677,7 @@ function init_gear_sets()
 	Sub="Priwen",
 	ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    body={ name="Sakpata's Plate", augments={'Path: A',}}, -- need to dark matter augments on odyssean chestplate
+    body={ name="Odyss. Chestplate", augments={'"Drain" and "Aspir" potency +1','Pet: Phys. dmg. taken -2%','Phalanx +2','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
     hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'Weapon Skill Acc.+11','Pet: VIT+5','Phalanx +3','Accuracy+19 Attack+19','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},

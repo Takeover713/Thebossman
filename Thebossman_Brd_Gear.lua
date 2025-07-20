@@ -754,7 +754,7 @@ sets.midcast.Prelude = {
 	sets.engaged = {
 		range={ name="Linos", augments={'Accuracy+15','"Store TP"+4','Quadruple Attack +3',}},
 		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
+		body="Ashera Harness",
 		hands="Bunzi's Gloves",
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Telchine Pigaches", augments={'Accuracy+16','"Store TP"+4','DEX+8',}},
@@ -791,7 +791,7 @@ sets.midcast.Prelude = {
 		neck="Bard's Charm +2",
 		ear1="Digni. Earring",
 		ear2="Telos Earring",
-		body="Ayanmo Corazza +2",
+		body="Ashera Harness",
 		hands="Bunzi's Gloves",
 		ring1="Ramuh Ring +1",
 		ring2="Ilabrat Ring",
@@ -804,7 +804,7 @@ sets.midcast.Prelude = {
 	sets.engaged.DW = {
 		range={ name="Linos", augments={'Accuracy+15','"Store TP"+4','Quadruple Attack +3',}},
 		head="Aya. Zucchetto +2",
-		body="Ayanmo Corazza +2",
+		body="Ashera Harness",
 		hands="Bunzi's Gloves",
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Telchine Pigaches", augments={'Accuracy+16','"Store TP"+4','DEX+8',}},
