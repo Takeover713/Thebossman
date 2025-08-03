@@ -122,7 +122,7 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	
 	sets.precast.JA.Nightingale = {feet="Bihu Slippers +3"}
-	sets.precast.JA.Troubadour = {body="Bihu Jstcorps. +1"}
+	sets.precast.JA.Troubadour = {body="Bihu Jstcorps +1"}
 	sets.precast.JA['Soul Voice'] = {legs="Bihu Cannions +3"}
 
 	-- Waltz set (chr and vit)
@@ -664,12 +664,10 @@ sets.midcast.Prelude = {
 	-- Resting sets
 	--sets.resting = {}
 	
-	sets.idle = {    
-    main="Carnwenhan",
-    sub="Genmei Shield",
+	sets.idle = {
 	range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
     head="Null Masque",
-    body="Volte Doublet",
+    body="Ashera Harness",
     hands="Shrieker's Cuffs",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Nyame Sollerets",
@@ -682,61 +680,13 @@ sets.midcast.Prelude = {
     back={ name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }
 
-	sets.idle.PDT = {    
-    main="Carnwenhan",
-    sub="Genmei Shield",
-    range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head="Null Masque",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Shrieker's Cuffs",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Nyame Sollerets",
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist="Flume Belt +1",
-    left_ear="Etiolation Earring",
-    right_ear="Ethereal Earring",
-    left_ring="Defending Ring",
-    right_ring="Moonlight Ring",
-    back="Moonbeam Cape",
-}
+	sets.idle.PDT = {}
 
 	-- Defense sets
 
-	sets.defense.PDT = {
-    main="Carnwenhan",
-    sub="Genmei Shield",
-    range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head="Null Masque",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Shrieker's Cuffs",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Nyame Sollerets",
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist="Flume Belt +1",
-    left_ear="Etiolation Earring",
-    right_ear="Ethereal Earring",
-    left_ring="Defending Ring",
-    right_ring="Moonlight Ring",
-    back="Moonbeam Cape",
-}
+	sets.defense.PDT = {}
 
-	sets.defense.MDT = {
-    main="Carnwenhan",
-    sub="Genmei Shield",
-    range={ name="Linos", augments={'Mag. Evasion+12','"Fast Cast"+6','INT+6 MND+6',}},
-    head="Null Masque",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Shrieker's Cuffs",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Nyame Sollerets",
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist="Null Belt",
-    left_ear="Etiolation Earring",
-    right_ear="Ethereal Earring",
-    left_ring="Defending Ring",
-    right_ring="Moonlight Ring",
-    back="Moonbeam Cape",
-}
+	sets.defense.MDT = {}
 
 	sets.Kiting = {feet="Fili Cothurnes +1"}
 
