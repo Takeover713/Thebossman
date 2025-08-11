@@ -122,7 +122,7 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	
 	sets.precast.JA.Nightingale = {feet="Bihu Slippers +3"}
-	sets.precast.JA.Troubadour = {body="Bihu Jstcorps +1"}
+	sets.precast.JA.Troubadour = {body="Bihu Just. +4"}
 	sets.precast.JA['Soul Voice'] = {legs="Bihu Cannions +3"}
 
 	-- Waltz set (chr and vit)
@@ -134,7 +134,7 @@ function init_gear_sets()
 	sets.precast.WS = {
     range={ name="Linos", augments={'Accuracy+10 Attack+10','Weapon skill damage +3%','STR+6 DEX+6',}},
     head="Nyame Helm",
-	body="Bihu Jstcorps. +3",
+	body="Bihu Just. +4",
 	hands="Nyame Gauntlets",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
@@ -157,7 +157,7 @@ function init_gear_sets()
 	sets.precast.WS['Savage Blade'] = {
 	range={ name="Linos", augments={'Accuracy+10 Attack+10','Weapon skill damage +3%','STR+6 DEX+6',}},
     head="Nyame Helm",
-	body="Bihu Jstcorps. +3",
+	body="Bihu Just. +4",
 	hands="Nyame Gauntlets",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
@@ -173,7 +173,7 @@ function init_gear_sets()
 	sets.precast.WS['Mordant Rime'] = {
 	range={ name="Linos", augments={'Accuracy+10 Attack+10','Weapon skill damage +3%','STR+6 DEX+6',}},
     head="Nyame Helm",
-    body="Bihu Jstcorps. +3",
+    body="Bihu Just. +4",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
