@@ -558,15 +558,15 @@ function init_gear_sets()
 	sets.weapons.Heishi = {main="Heishi Shorinken",sub="Kunimitsu"}
 	sets.weapons.Naegling = {main="Naegling",sub="Kunimitsu"}
 	sets.weapons.LowBuff = {main="Heishi Shorinken",sub="Blurred Knife +1"}
-	sets.weapons.ProcDagger = {main="Qutrub Knife",sub=empty}
+	sets.weapons.ProcDagger = {main="Wind Knife +1",sub=empty}
 	sets.weapons.ProcSword = {main="Blizzard Brand",sub=empty}
-	sets.weapons.ProcGreatSword = {main="Lament",sub=empty}
+	sets.weapons.ProcGreatSword = {main="Lament",sub=empty} --Do not own
 	sets.weapons.ProcScythe = {main="Lost Sickle",sub=empty}
 	sets.weapons.ProcPolearm = {main="Iapetus",sub=empty}
 	sets.weapons.ProcGreatKatana = {main="Ark Tachi",sub=empty}
-	sets.weapons.ProcKatana = {main="Kunai",sub="Kunai"}
+	sets.weapons.ProcKatana = {main="Yagyu Shortblade +1",sub=empty}
 	sets.weapons.ProcClub = {main="Lady Bell",sub=empty}
-	sets.weapons.ProcStaff = {main="Chantoyant Staff",sub=empty}
+	sets.weapons.ProcStaff = {main="Fourth Staff",sub=empty}
 	sets.weapons.MagicWeapons = {main="Ochu",sub="Ochu"}
 end
 

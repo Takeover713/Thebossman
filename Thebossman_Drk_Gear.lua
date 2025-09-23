@@ -142,7 +142,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		ammo="Pemphredo Tathlum",
 		head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-		body="Ignominy Cuirass +3",
+		body="Ignominy Cuirass +4",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Heath. Sollerets +3",
