@@ -3,8 +3,8 @@
 sets.Sheltered = {ring2="Sheltered Ring"}
 sets.Capacity = {back="Mecisto. Mantle"}
 
-sets.buff.Doom = {waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
-sets.TreasureHunter = {head="Volte Cap",waist="Chaac Belt",ammo="Per. Lucky Egg"}
+sets.buff.Doom = {waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring",neck="Nicander's Necklace"}
+sets.TreasureHunter = {head="Volte Cap",waist="Chaac Belt",ammo="Per. Lucky Egg",legs="Volte Hose"}
 
 sets.precast.Item['Hallowed Water'] = {}
 sets.precast.Item['Holy Water'] = {}

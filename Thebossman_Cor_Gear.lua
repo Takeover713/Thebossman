@@ -81,8 +81,8 @@ function init_gear_sets()
 
 	sets.precast.JA['Triple Shot'] = {body="Chasseur's Frac +3"}
     sets.precast.JA['Snake Eye'] = {legs="Lanun Trews +1"}
-    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +3"}
-    sets.precast.JA['Random Deal'] = {body="Lanun Frac +3"}
+    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +4"}
+    sets.precast.JA['Random Deal'] = {body="Lanun Frac +4"}
     sets.precast.FoldDoubleBust = {hands="Lanun Gants +1"}
     
 	sets.precast.CorsairRoll = { main={ name="Rostam", augments={'Path: C',}},range="Compensator",head="Lanun Tricorne +3",neck="Regal Necklace",hands="Chasseur's Gants +3",
@@ -111,7 +111,7 @@ function init_gear_sets()
     sets.precast.CorsairShot = {
 	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Herculean Trousers", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Crit. hit damage +3%','"Mag.Atk.Bns."+4',}},
     feet="Chass. Bottes +3",
@@ -127,7 +127,7 @@ function init_gear_sets()
 	sets.precast.CorsairShot.Damage = {
 	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Herculean Trousers", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Crit. hit damage +3%','"Mag.Atk.Bns."+4',}},
     feet="Chass. Bottes +3",
@@ -143,7 +143,7 @@ function init_gear_sets()
     sets.precast.CorsairShot.Proc = {
 	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Herculean Trousers", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Crit. hit damage +3%','"Mag.Atk.Bns."+4',}},
     feet="Chass. Bottes +3",
@@ -159,7 +159,7 @@ function init_gear_sets()
     sets.precast.CorsairShot['Light Shot'] = {
 	ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Dbl.Atk."+1','MND+7','"Mag.Atk.Bns."+15',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Herculean Trousers", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Crit. hit damage +3%','"Mag.Atk.Bns."+4',}},
     feet="Chass. Bottes +3",
@@ -209,7 +209,7 @@ function init_gear_sets()
     sets.precast.RA = {ammo=gear.RAbullet,
         head="Chass. Tricorne +1",
 		neck="Commodore Charm +2",
-        body="Laksa. Frac +3",
+        body="Lanun Frac +4",
 		hands={ name="Lanun Gants +3", augments={'Enhances "Fold" effect',}},
 		Left_ring="Crepuscular Ring",
 		back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},
@@ -220,7 +220,7 @@ function init_gear_sets()
 	-- sets.precast.RA = {
     -- ammo=gear.RAbullet,
     -- head="Chass. Tricorne +2",
-    -- body="Laksa. Frac +3",
+    -- body="Lanun Frac +4",
     -- hands={ name="Lanun Gants +3", augments={'Enhances "Fold" effect',}},
     -- legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     -- feet="Meg. Jam. +2",
@@ -262,10 +262,10 @@ function init_gear_sets()
 	
 	sets.precast.WS['Aeolian Edge'] = {ammo=gear.QDbullet,
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
+    body="Lanun Frac +4",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +4", augments={'Enhances "Wild Card" effect',}},
     neck="Baetyl Pendant",
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
@@ -325,10 +325,10 @@ function init_gear_sets()
 	
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
     head="Lanun Tricorne +3",
-    body="Laksa. Frac +3",
+    body="Lanun Frac +4",
     hands="Chasseur's Gants +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
@@ -341,10 +341,10 @@ function init_gear_sets()
 
     sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
     head="Lanun Tricorne +3",
-    body="Laksa. Frac +3",
+    body="Lanun Frac +4",
     hands="Chasseur's Gants +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
@@ -368,10 +368,10 @@ function init_gear_sets()
     -- Hachirin-no-Obi
 	sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
     head="Pixie Hairpin +1",
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Commodore Charm +2",
     waist="Eschan Stone",
     left_ear="Moonshade Earring",
@@ -383,10 +383,10 @@ function init_gear_sets()
 
     sets.precast.WS['Leaden Salute'].Acc = {ammo=gear.MAbullet,
     head="Pixie Hairpin +1",
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Commodore Charm +2",
     waist="Eschan Stone",
     left_ear="Moonshade Earring",
@@ -398,10 +398,10 @@ function init_gear_sets()
 
     sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Commodore Charm +2",
     waist="Eschan Stone",
     left_ear="Moonshade Earring",
@@ -413,10 +413,10 @@ function init_gear_sets()
 
     sets.precast.WS['Wildfire'].Acc = {ammo=gear.MAbullet,
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Commodore Charm +2",
     waist="Eschan Stone",
     left_ear="Moonshade Earring",
@@ -432,10 +432,10 @@ function init_gear_sets()
 		--Because omen skillchains.
     sets.precast.WS['Burning Blade'] = {ammo=gear.MAbullet,
 	head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Lanun Frac +3",
+    body="Lanun Frac +4",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Lanun Bottes +3",
+    feet="Lanun Bottes +4",
     neck="Commodore Charm +2",
     waist="Eschan Stone",
     left_ear="Moonshade Earring",
