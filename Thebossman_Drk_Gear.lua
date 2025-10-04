@@ -111,7 +111,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'] = {
 		ammo="Pemphredo Tathlum",
 		head={ name="Nyame Helm", augments={'Path: B',}},
-		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
+		body="Fall. Cuirass +4",
 		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Heath. Sollerets +3",
