@@ -4,7 +4,7 @@ function user_setup()
     state.CastingMode:options('Normal','Resistant','Proc','OccultAcumen')
     state.IdleMode:options('Normal', 'PDT', 'TPEat')
 	state.HybridMode:options('Normal','PDT')
-	state.Weapons:options('None','Akademos','Khatvanga')
+	state.Weapons:options('None','Musa')
 
 	gear.nuke_jse_back = {name="Lugh's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10'}}
 	
@@ -44,6 +44,9 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
+	
+	-- Weapons sets
+	sets.weapons.Musa = {main="Musa",sub="Alber Strap"}
 
     -- Precast Sets
 
@@ -86,10 +89,22 @@ function init_gear_sets()
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
-    sets.precast.WS['Myrkr'] = {ammo="Staunch Tathlum",
-		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Evans Earring",ear2="Etiolation Earring",
-		body="Amalric Doublet",hands="Regal Cuffs",ring1="Mephitas's Ring +1",ring2="Mephitas's Ring",
-		back="Aurist's Cape +1",waist="Yamabuki-no-Obi",legs="Psycloth Lappas",feet="Medium's Sabots"}
+	sets.precast.WS = {
+		ammo="Oshasha's Treatise",
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Null Loop",
+		waist="Null Belt",
+		left_ear="Crep. Earring",
+		right_ear="Telos Earring",
+		left_ring="Epaminondas's Ring",
+		right_ring="Ephramad's Ring",
+		back="Moonbeam Cape",
+	}
+    sets.precast.WS['Myrkr'] = {}
 
     -- Midcast Sets
 
@@ -99,12 +114,12 @@ function init_gear_sets()
 	sets.RecoverMP = {body="Seidr Cotehardie"}
 	
 	-- Gear for Magic Burst mode.
-    sets.MagicBurst = {main="Akademos",neck="Mizu. Kubikazari",hands="Amalric Gages +1",ring1="Mujin Band",ring2="Locus Ring",feet="Jhakri Pigaches +2"}
+    sets.MagicBurst = {}
 	
 	-- Gear for specific elemental nukes.
-	sets.element.Wind = {main="Marin Staff +1"}
-	sets.element.Ice = {main="Ngqoqwanb"}
-	sets.element.Earth = {neck="Quanpur Necklace"}
+	sets.element.Wind = {}
+	sets.element.Ice = {}
+	sets.element.Earth = {}
 	sets.element.Dark = {head="Pixie Hairpin +1",ring2="Archon Ring"}
 
     sets.midcast.FastRecast = {main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Hasty Pinion +1",
@@ -588,7 +603,8 @@ function init_gear_sets()
 		
 	sets.idle.Hippo = set_combine(sets.idle.PDT, {feet="Hippo. Socks +1"})
 
-    sets.idle.Weak = {main="Malignance Pole",
+    sets.idle.Weak = {
+	main="Malignance Pole",
     sub="Irenic Strap +1",
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
@@ -669,26 +685,37 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
     -- Normal melee group
-    sets.engaged = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
-        head="Befouled Crown",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-        body="Jhakri Robe +2",hands=gear.merlinic_refresh_hands,ring1="Defending Ring",ring2="Sheltered Ring",
-        back="Umbra Cape",waist="Flax Sash",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+    sets.engaged = {
+		ammo="Staunch Tathlum +1",
+		head="Arbatel Bonnet +3",
+		body="Arbatel Gown +3",
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs="Arbatel Pants +3",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck={ name="Loricate Torque +1", augments={'Path: A',}},
+		waist="Grunfeld Rope",
+		left_ear="Crep. Earring",
+		right_ear="Telos Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back="Moonbeam Cape",
+	}
 		
-	sets.engaged.PDT = {main="Malignance Pole",
-    sub="Irenic Strap +1",
-    ammo="Staunch Tathlum +1",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
-    waist="Carrier's Sash",
-    left_ear="Etiolation Earring",
-    right_ear="Lugalbanda Earring",
-    left_ring="Defending Ring",
-    right_ring="Vocane Ring",
-    back="Moonbeam Cape",}
+	sets.engaged.PDT = {
+		ammo="Staunch Tathlum +1",
+		head="Arbatel Bonnet +3",
+		body="Arbatel Gown +3",
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs="Arbatel Pants +3",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck={ name="Loricate Torque +1", augments={'Path: A',}},
+		waist="Grunfeld Rope",
+		left_ear="Crep. Earring",
+		right_ear="Telos Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back="Moonbeam Cape",
+	}
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Ebullience'] = {head="Arbatel Bonnet +3"}
@@ -720,9 +747,6 @@ function init_gear_sets()
     --sets.buff.FullSublimation = {}
    -- sets.buff.PDTSublimation = {}
 	
-	-- Weapons sets
-	sets.weapons.Akademos = {main="Akademos",sub="Niobid Strap"}
-	sets.weapons.Khatvanga = {main="Khatvanga",sub="Bloodrain Strap"}
 end
 
 -- Select default macro book on initial load or subjob change.
