@@ -213,7 +213,8 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-        range="Animator P +1",
+        range="Neo Animator",
+	ammo="Automat. Oil +2",
     head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -234,8 +235,8 @@ function init_gear_sets()
 		
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
-        range="Animator P +1",
-    ammo="Automat. Oil +3",
+        range="Neo Animator",
+    ammo="Automat. Oil +2",
     head="Nyame Helm",
 	body="Nyame Mail",
     --body="Foire Tobe +1",
@@ -251,19 +252,34 @@ function init_gear_sets()
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-        range="Animator P +1",
-    ammo="Automat. Oil +3",
-    head="Tali'ah Turban +1",
-    body="Foire Tobe +1",
-    hands="Tali'ah Gages +1",
-    legs="Tali'ah Sera. +1",
-    feet="Tali'ah Crackows +1",
+        range="Neo Animator",
+    ammo="Automat. Oil +2",
+    head="Mpaca's Cap",
+    body="Mpaca's Doublet",
+    hands="Mpaca's Gloves",
+    legs="Tali'ah Sera. +2",
+    feet="Mpaca's Boots",
     neck="Shulmanu Collar",
     waist="Incarnation Sash",
     left_ear="Handler's Earring +1",
     right_ear="Enmerkar Earring",
     left_ring="Varar Ring",
     right_ring="Varar Ring"}
+	
+	-- sets.idle.Pet.Engaged = {
+        -- range="Neo Animator",
+    -- ammo="Automat. Oil +2",
+    -- head="Tali'ah Turban +1",
+    -- body="Foire Tobe +1",
+    -- hands="Tali'ah Gages +1",
+    -- legs="Tali'ah Sera. +2",
+    -- feet="Tali'ah Crackows +1",
+    -- neck="Shulmanu Collar",
+    -- waist="Incarnation Sash",
+    -- left_ear="Handler's Earring +1",
+    -- right_ear="Enmerkar Earring",
+    -- left_ring="Varar Ring",
+    -- right_ring="Varar Ring"}
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
 	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
@@ -317,8 +333,9 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-    range="Animator P +1",
-    ammo="Automat. Oil +3",
+    -- range="Animator P +1",
+	range="Neo Animator",
+    ammo="Automat. Oil +2",
     head="Tali'ah Turban +1",
     body="Foire Tobe +1",
     hands="Tali'ah Gages +1",
@@ -378,7 +395,7 @@ function init_gear_sets()
         back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
 		
 	-- Weapons sets
-	sets.weapons.PetWeapons = {main="Ohtas",range="Animator P +1",}
+	sets.weapons.PetWeapons = {main="Ohtas",range="Neo Animator",}
 	sets.weapons.Godhands = {main="Godhands",range="Animator P +1",}
 end
 

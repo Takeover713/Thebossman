@@ -110,7 +110,7 @@ function init_gear_sets()
     sets.Enmity.DT = {
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
-    body="Rev. Surcoat +3",
+    body="Rev. Surcoat +4",
     --hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
@@ -144,12 +144,12 @@ function init_gear_sets()
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {ammo="Paeapua",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Nourish. Earring",ear2="Nourish. Earring +1",
-		body="Rev. Surcoat +3",hands="Cab. Gauntlets +1",ring1="Stikini Ring +1",ring2="Rufescent Ring",
+		body="Rev. Surcoat +4",hands="Cab. Gauntlets +1",ring1="Stikini Ring +1",ring2="Rufescent Ring",
 		back=gear.enmity_jse_back,waist="Luminary Sash",legs="Nyame Flanchard",feet="Carmine Greaves +1"}
 		
     sets.precast.JA['Chivalry'].DT = {ammo="Paeapua",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Rev. Surcoat +3",hands="Cab. Gauntlets +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+		body="Rev. Surcoat +4",hands="Cab. Gauntlets +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
 		back="Moonlight Cape",waist="Luminary Sash",legs="Nyame Flanchard",feet="Carmine Greaves +1"}
 
 	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {
@@ -221,7 +221,7 @@ function init_gear_sets()
     sets.precast.FC = {
 	ammo="Sapience Orb",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-    body="Rev. Surcoat +3",
+    body="Rev. Surcoat +4",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
@@ -239,7 +239,7 @@ function init_gear_sets()
     -- neck="Orunmila's Torque",
     -- ear1="Loquac. Earring",
     -- ear2="Enchntr. Earring +1",
-    -- body="Rev. Surcoat +3",
+    -- body="Rev. Surcoat +4",
     -- hands="Leyline Gloves",
     -- ring1="Prolix Ring",
     -- ring2="Kishar Ring",
@@ -251,7 +251,7 @@ function init_gear_sets()
     sets.precast.FC.DT = {
 	ammo="Sapience Orb",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-    body="Rev. Surcoat +3",
+    body="Rev. Surcoat +4",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     legs={ name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
@@ -531,7 +531,7 @@ function init_gear_sets()
     sets.midcast.Reprisal = {
 	ammo="Sapience Orb",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    body="Rev. Surcoat +3", -- shabti Cuirass +1 if i want to add duration but not ilvl 119 so maybe i dont want that
+    body="Rev. Surcoat +4", -- shabti Cuirass +1 if i want to add duration but not ilvl 119 so maybe i dont want that
     hands="Regal Gauntlets",
     legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
     feet={ name="Odyssean Greaves", augments={'"Fast Cast"+4','Mag. Acc.+15','"Mag.Atk.Bns."+11',}},
@@ -637,7 +637,7 @@ function init_gear_sets()
     -- neck="Moonlight Necklace",
     -- ear2="Knightly Earring",
     -- ear1="Odnowa Earring +1",
-    -- body="Rev. Surcoat +3",
+    -- body="Rev. Surcoat +4",
     -- hands="Eschite Gauntlets",
     -- ring1="Gelatinous Ring +1",
     -- ring2="Defending Ring",

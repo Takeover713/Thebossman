@@ -66,7 +66,7 @@ function init_gear_sets()
 	sets.precast.JA['Souleater'] = {head="Ig. Burgeonet +3"}
 	sets.precast.JA['Weapon Bash'] = {hands="Ig. Gauntlets +3"}
 	sets.precast.JA['Nether Void'] = {legs="Heath. Flanchard +3"}
-	sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +3"}
+	sets.precast.JA['Blood Weapon'] = {body="Fallen's Cuirass +4"}
 	sets.precast.JA['Dark Seal'] = {head="Fallen's Burgeonet +3"}
 	sets.precast.JA['Last Resort'] = {back="Ankou's Mantle"}
                    
@@ -958,7 +958,7 @@ function init_gear_sets()
 	
 	sets.buff.Souleater = {}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {head="Frenzy Sallet"}
+	sets.buff.Sleep = {}
 	sets.latent_refresh = {waist="Fucho-no-Obi"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.buff['Dark Seal'] = {head="Fallen's Burgeonet +3"}

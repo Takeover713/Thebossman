@@ -239,7 +239,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Calamitous Earring",
     left_ring="Defending Ring",
-    --right_ring="Vocane Ring",
+    --right_ring="Murky Ring",
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
 	})
 
@@ -597,7 +597,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring",
+    right_ring="Murky Ring",
     back="Moonbeam Cape",
 	}
 		
@@ -617,7 +617,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring",
+    right_ring="Murky Ring",
     back="Moonbeam Cape",}
 		
     sets.idle.TPEat = set_combine(sets.idle, {neck="Chrys. Torque"})
@@ -637,7 +637,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring",
+    right_ring="Murky Ring",
     back="Moonbeam Cape",}
 
     sets.defense.MDT = {main="Malignance Pole",
@@ -653,7 +653,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring",
+    right_ring="Murky Ring",
     back="Moonbeam Cape",}
 		
     sets.defense.MEVA = {main="Malignance Pole",
@@ -669,7 +669,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring",
+    right_ring="Murky Ring",
     back="Moonbeam Cape",}
 		
     sets.Kiting = {feet="Herald's Gaiters"}
