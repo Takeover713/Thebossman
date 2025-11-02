@@ -84,14 +84,14 @@ function init_gear_sets()
     sets.precast.JA['Snake Eye'] = {legs="Lanun Trews +1"}
     sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +4"}
     sets.precast.JA['Random Deal'] = {body="Lanun Frac +4"}
-    sets.precast.FoldDoubleBust = {hands="Lanun Gants +1"}
+    sets.precast.FoldDoubleBust = {hands="Lanun Gants +4"}
     
-	sets.precast.CorsairRoll = { main={ name="Rostam", augments={'Path: C',}},range="Compensator",head="Lanun Tricorne +3",neck="Regal Necklace",hands="Chasseur's Gants +3",
+	sets.precast.CorsairRoll = { main={ name="Rostam", augments={'Path: C',}},range="Compensator",head="Lanun Tricorne +4",neck="Regal Necklace",hands="Chasseur's Gants +3",
 		back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},feet="Malignance Boots"}
 
 	-- sets.precast.CorsairRoll = {
 	-- main={ name="Rostam", augments={'Path: C',}},
-	-- head="Lanun Tricorne +3",
+	-- head="Lanun Tricorne +4",
 	-- neck="Regal Necklace",
 	-- hands="Chasseur's Gants +3",
 	-- ring2="Luzaf's Ring",
@@ -211,7 +211,7 @@ function init_gear_sets()
         head="Chass. Tricorne +1",
 		neck="Commodore Charm +2",
         body="Lanun Frac +4",
-		hands={ name="Lanun Gants +3", augments={'Enhances "Fold" effect',}},
+		hands="Lanun Gants +4",
 		Left_ring="Crepuscular Ring",
 		back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','"Snapshot"+10',}},
 		waist="Yemaya Belt",
@@ -222,7 +222,7 @@ function init_gear_sets()
     -- ammo=gear.RAbullet,
     -- head="Chass. Tricorne +2",
     -- body="Lanun Frac +4",
-    -- hands={ name="Lanun Gants +3", augments={'Enhances "Fold" effect',}},
+    -- hands={ name="Lanun Gants +4", augments={'Enhances "Fold" effect',}},
     -- legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     -- feet="Meg. Jam. +2",
     -- neck={ name="Comm. Charm +2", augments={'Path: A',}},
@@ -325,7 +325,7 @@ function init_gear_sets()
 }
 	
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
-    head="Lanun Tricorne +3",
+    head="Lanun Tricorne +4",
     body="Lanun Frac +4",
     hands="Chasseur's Gants +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -341,7 +341,7 @@ function init_gear_sets()
 
 
     sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
-    head="Lanun Tricorne +3",
+    head="Lanun Tricorne +4",
     body="Lanun Frac +4",
     hands="Chasseur's Gants +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -525,7 +525,7 @@ function init_gear_sets()
 		
 	sets.buff['Triple Shot'] = {
 	body="Chasseur's Frac +3",
-	hands="Lanun Gants +3",
+	hands="Lanun Gants +4",
 	head="Oshosi Mask +1",
 	legs="Osh. Trousers +1",
 	feet="Osh. Leggings +1",

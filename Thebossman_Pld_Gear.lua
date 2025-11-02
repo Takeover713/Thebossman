@@ -18,23 +18,6 @@ function user_job_setup()
 	gear.enmity_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10',}}
 
 	-- Additional local binds
-	send_command('bind !` gs c SubJobEnmity')
-	send_command('bind ^backspace input /ja "Shield Bash" <t>')
-	send_command('bind @backspace input /ja "Cover" <stpt>')
-	send_command('bind !backspace input /ja "Sentinel" <me>')
-	send_command('bind @= input /ja "Chivalry" <me>')
-	send_command('bind != input /ja "Palisade" <me>')
-	send_command('bind ^delete input /ja "Provoke" <stnpc>')
-	send_command('bind !delete input /ma "Cure IV" <stal>')
-	send_command('bind @delete input /ma "Flash" <stnpc>')
-    send_command('bind !f11 gs c cycle ExtraDefenseMode')
-	send_command('bind @` gs c cycle RuneElement')
-	send_command('bind ^pause gs c toggle AutoRuneMode')
-	send_command('bind ^q gs c set IdleMode Kiting')
-	send_command('bind !q gs c set IdleMode PDT')
-	send_command('bind @f8 gs c toggle AutoTankMode')
-	send_command('bind @f10 gs c toggle TankAutoDefense')
-	send_command('bind ^@!` gs c cycle SkillchainMode')
 	
 	send_command('exec init.txt')
 	
@@ -144,19 +127,19 @@ function init_gear_sets()
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {ammo="Paeapua",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Nourish. Earring",ear2="Nourish. Earring +1",
-		body="Rev. Surcoat +4",hands="Cab. Gauntlets +1",ring1="Stikini Ring +1",ring2="Rufescent Ring",
+		body="Rev. Surcoat +4",hands="Cab. Gauntlets +4",ring1="Stikini Ring +1",ring2="Rufescent Ring",
 		back=gear.enmity_jse_back,waist="Luminary Sash",legs="Nyame Flanchard",feet="Carmine Greaves +1"}
 		
     sets.precast.JA['Chivalry'].DT = {ammo="Paeapua",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Rev. Surcoat +4",hands="Cab. Gauntlets +1",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+		body="Rev. Surcoat +4",hands="Cab. Gauntlets +4",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
 		back="Moonlight Cape",waist="Luminary Sash",legs="Nyame Flanchard",feet="Carmine Greaves +1"}
 
 	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
+    hands="Cab. Gauntlets +4",
     legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     neck="Moonlight Necklace",
@@ -183,7 +166,7 @@ function init_gear_sets()
 	ammo="Sapience Orb",
     head="Loess Barbuta +1",
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-    hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
+    hands="Cab. Gauntlets +4",
     legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     neck="Moonlight Necklace",
