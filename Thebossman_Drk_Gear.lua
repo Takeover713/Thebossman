@@ -958,7 +958,7 @@ function init_gear_sets()
 	
 	sets.buff.Souleater = {}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {}
+	sets.buff.Sleep = {neck="Loricate Torque +1"}
 	sets.latent_refresh = {waist="Fucho-no-Obi"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	sets.buff['Dark Seal'] = {head="Fallen's Burgeonet +3"}

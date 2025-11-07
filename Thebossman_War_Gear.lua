@@ -9,7 +9,7 @@ function user_setup()
 	state.IdleMode:options('Normal','PDT','Refresh','Reraise')
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
-	state.Weapons:options('Naegling','Bunzi','Polearm','Loxotic','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcClub','ProcStaff')
+	state.Weapons:options('Naegling','Chango','Polearm','Loxotic','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcClub','ProcStaff')
 
 	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
 	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
@@ -24,7 +24,7 @@ function user_setup()
 	autows_list = {['Chango']='Upheaval',['Polearm']='Impulse Drive',['Loxotic']='Judgment',['Naegling']='Savage Blade'}
 	
 	-- Weapons sets
-	sets.weapons.Bunzi = {main="Bunzi's Chopper",sub="Utu Grip"}
+	sets.weapons.Chango = {main="Chango",sub="Utu Grip"}
 	sets.weapons.Naegling = {main="Naegling",sub="Blurred Shield +1"}
 	sets.weapons.Loxotic = {main="Loxotic Mace +1",sub="Blurred Shield +1"}
 	sets.weapons.Polearm = {main="Shining One",sub="Utu Grip"}
