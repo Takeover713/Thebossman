@@ -985,5 +985,5 @@ end
 
 
 function user_job_lockstyle()
-	windower.chat.input('/lockstyleset 4')
+	windower.chat.input('/lockstyleset 1')
 end
