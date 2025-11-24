@@ -691,8 +691,6 @@ function select_default_macro_book()
 end
 
 
-function sub_job_change(new,old)
-send_command('wait 8;input /lockstyleset 1')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 1')
 end
-
-send_command('wait 8;input /lockstyleset 1')

@@ -867,8 +867,6 @@ end
 
 send_command('exec init.txt')
 
-function sub_job_change(new,old)
-send_command('wait 10;input /lockstyleset 1')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 1')
 end
-
-send_command('wait 10;input /lockstyleset 1')
