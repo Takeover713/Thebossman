@@ -870,3 +870,26 @@ send_command('exec init.txt')
 function user_job_lockstyle()
 	windower.chat.input('/lockstyleset 1')
 end
+
+--MAIN HAND AND SHIELD  SEPERATION CODE
+
+-- Goes In: function user_job_setup(), Option names must be the name of the item.
+--Weapons options should be named for any specific traits you want it to have, such as: Acc, Proc, Dual, Enspell
+-- state.Weapons:options('Default','Alternate'}
+-- state.MainHand = M{['description'] = 'MainHand','Burtgang','Naegling','Brilliance','Malevolence'}
+-- state.OffHand = M{['description'] = 'OffHand','Aegis','Ochain','Demers. Degen +1'}
+
+--Goes In: function init_gear_sets()
+-- sets.weapons.Default = {main="Burtgang", sub="Aegis"}
+-- sets.weapons.Alternate = {main="Burtgang", sub="Ochain"}
+
+--On it's own
+-- function user_job_state_change(stateField, newValue, oldValue)
+    -- if stateField == 'MainHand' then
+        -- sets.weapons[state.Weapons.value].main = state.MainHand.value
+        -- equip_weaponset()
+    -- elseif stateField == 'OffHand' then
+        -- sets.weapons[state.Weapons.value].sub = state.OffHand.value
+        -- equip_weaponset()
+    -- end
+-- end
