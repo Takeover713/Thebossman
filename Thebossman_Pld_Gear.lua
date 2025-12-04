@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','Normal','Aminon')
-	state.Weapons:options('BurtgangSrivatsa','BurtgangAegis','BurtgangOchain','Naegling')
+	state.Weapons:options('BurtgangSrivatsa','BurtgangAegis','BurtgangOchain','Naegling','Polearm')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -37,6 +37,7 @@ function init_gear_sets()
 	sets.weapons.BurtgangAegis = {main="Burtgang",sub="Aegis"}
 	sets.weapons.BurtgangSrivatsa = {main="Burtgang",sub="Srivatsa"}
 	sets.weapons.Naegling = {main="Naegling",sub="Blurred Shield +1"}
+	sets.weapons.Polearm = {main="Shining One",sub="Alber Strap"}
 	
 	--------------------------------------
 	-- Precast sets
